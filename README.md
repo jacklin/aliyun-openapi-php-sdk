@@ -13,7 +13,7 @@
 ```php
 use Tool\AliyunSdk;
 
-$aliyun_sdk = new AliyunSdk(1,2,2);
+$aliyun_sdk = new AliyunSdk('accessKeyId','accessKeySecret,'appKey');
 
 $request_push = $aliyun_sdk->push('V20160801','PushRequest');
 
@@ -48,6 +48,22 @@ print_r("\r\n");
 print_r($response);
 
 ```
+## explain
+
+AliyunSdk 的使用类
+
+实例化构造函数需要三个参数分别是 accessKeyId(访问ID), accessKeySecret(访问密钥), appKey(应用公钥)
+
+实例化AliyunSdk类后再调用 阿里云openApi Sdk 中的服务
+
+如：支持方法 alidns|batchcompute|cdn|cs|dm|domain|ecs|green|iot|jaq|kms|live|market|mts|push|rds|slb|sms|sts|ubsms
+
+方法参数分别是 阿里云openApi Sdk 中的目录名即：V20160801 与对应的请求类名称即：PushRequest
+
+注：方法参数值区分大小写
+
+返回值：为请求类对象，使用方法如上【Example】(## Example)
+
 ## Authors && Contributors
 
 - [Jack Lin](https://github.com/jacklin)

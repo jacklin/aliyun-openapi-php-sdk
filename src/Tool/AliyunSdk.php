@@ -2,7 +2,26 @@
 namespace Tool; 
 define('ALIYUN_OPENAPI_PHP_SDK',__DIR__.'/aliyun-openapi-php-sdk/');
 include_once ALIYUN_OPENAPI_PHP_SDK.'aliyun-php-sdk-core/Config.php';
+
+use Alidns\Request\V20150109;
+use BatchCompute\Request\V20130111;
+use Cdn\Request\V20141111;
+use CS\Request\V20151215;
+use Dm\Request\V20151123;
+use Domain\Request\V20160511;
+use Ecs\Request\V20140526;
+use Green\Request\V20161216;
+use Iot\Request\V20160530;
+use jap\Request\V20161123;
+use Kms\Request\V20160120;
+use live\Request\V20161101;
+use Mts\Request\V20140618;
 use Push\Request\V20160801;
+use Rds\Request\V20140815;
+use Slb\Request\V20140515;
+use Sms\Request\V20160827;
+use Sts\Request\V20150401;
+use Ubsms\Request\V20150623;
 /**
 * 
 */
