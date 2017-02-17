@@ -5,4 +5,7 @@ use Tool\AliyunSdk;
 
 $aliyun_sdk = new AliyunSdk(1,2,2);
 
-var_dump($aliyun_sdk->Push('V20160801','PushRequest'));
+echo "<pre>";
+
+// var_dump($aliyun_sdk->Push('V20160801','PushRequest'));
+var_dump($aliyun_sdk->Cs('V20151215','CreateTemplateRequest'));
