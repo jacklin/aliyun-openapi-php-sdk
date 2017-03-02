@@ -27,10 +27,10 @@ use Ubsms\Request\V20150623;
 */
 class AliyunSdk
 {
-	public $product; //应用sdk的某个项目
 	private $accessKeyId;
 	private $accessKeySecret;
 	private $appKey;
+	private $client; //对就SDK客户端对象
 	public function __construct($accessKeyId, $accessKeySecret, $appKey){
 			// 设置你自己的AccessKeyId/AccessSecret/AppKey
 			$this->accessKeyId = $accessKeyId;
@@ -40,7 +40,7 @@ class AliyunSdk
 	
 	public function __call(string $name, $arguments=[]){
 		$iClientProfile = \DefaultProfile::getProfile("cn-hangzhou", $this->accessKeyId, $this->accessKeySecret);
-		$client = new \DefaultAcsClient($iClientProfile);
+		$this->setClient(new \DefaultAcsClient($iClientProfile));
 
 		$mid_suffix = array_shift($arguments);
 		$suffix = array_shift($arguments);
@@ -55,5 +55,12 @@ class AliyunSdk
 		}else{
 			throw new \Exception("调用的方法无法实例化类:".$class_name);
 		}
+	}
+	public function getClient(){
+		return $this->client;
+	}
+	protected function setClient(\DefaultAcsClient $client){
+		$this->client = $client;
+		return $this;
 	}
 }
