@@ -23,45 +23,37 @@ class DescribeTagsRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Slb", "2014-05-15", "DescribeTags");
+		parent::__construct("Slb", "2014-05-15", "DescribeTags", "slb", "openAPI");
+		$this->setMethod("POST");
 	}
-
-	private  $ownerId;
-
-	private  $resourceOwnerAccount;
-
-	private  $resourceOwnerId;
-
-	private  $ownerAccount;
 
 	private  $access_key_id;
 
+	private  $resourceOwnerId;
+
 	private  $loadBalancerId;
 
-	private  $tags;
+	private  $resourceOwnerAccount;
 
-	private  $distinctKey;
+	private  $ownerAccount;
 
 	private  $pageSize;
 
+	private  $distinctKey;
+
+	private  $ownerId;
+
 	private  $pageNumber;
 
-	public function getOwnerId() {
-		return $this->ownerId;
+	private  $tags;
+
+	public function getaccess_key_id() {
+		return $this->access_key_id;
 	}
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
-
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
-
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+	public function setaccess_key_id($access_key_id) {
+		$this->access_key_id = $access_key_id;
+		$this->queryParameters["access_key_id"]=$access_key_id;
 	}
 
 	public function getResourceOwnerId() {
@@ -73,24 +65,6 @@ class DescribeTagsRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
-
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
-
-	public function getaccess_key_id() {
-		return $this->access_key_id;
-	}
-
-	public function setaccess_key_id($access_key_id) {
-		$this->access_key_id = $access_key_id;
-		$this->queryParameters["access_key_id"]=$access_key_id;
-	}
-
 	public function getLoadBalancerId() {
 		return $this->loadBalancerId;
 	}
@@ -100,22 +74,22 @@ class DescribeTagsRequest extends \RpcAcsRequest
 		$this->queryParameters["LoadBalancerId"]=$loadBalancerId;
 	}
 
-	public function getTags() {
-		return $this->tags;
+	public function getResourceOwnerAccount() {
+		return $this->resourceOwnerAccount;
 	}
 
-	public function setTags($tags) {
-		$this->tags = $tags;
-		$this->queryParameters["Tags"]=$tags;
+	public function setResourceOwnerAccount($resourceOwnerAccount) {
+		$this->resourceOwnerAccount = $resourceOwnerAccount;
+		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
 	}
 
-	public function getDistinctKey() {
-		return $this->distinctKey;
+	public function getOwnerAccount() {
+		return $this->ownerAccount;
 	}
 
-	public function setDistinctKey($distinctKey) {
-		$this->distinctKey = $distinctKey;
-		$this->queryParameters["DistinctKey"]=$distinctKey;
+	public function setOwnerAccount($ownerAccount) {
+		$this->ownerAccount = $ownerAccount;
+		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
 	public function getPageSize() {
@@ -127,6 +101,24 @@ class DescribeTagsRequest extends \RpcAcsRequest
 		$this->queryParameters["PageSize"]=$pageSize;
 	}
 
+	public function getDistinctKey() {
+		return $this->distinctKey;
+	}
+
+	public function setDistinctKey($distinctKey) {
+		$this->distinctKey = $distinctKey;
+		$this->queryParameters["DistinctKey"]=$distinctKey;
+	}
+
+	public function getOwnerId() {
+		return $this->ownerId;
+	}
+
+	public function setOwnerId($ownerId) {
+		$this->ownerId = $ownerId;
+		$this->queryParameters["OwnerId"]=$ownerId;
+	}
+
 	public function getPageNumber() {
 		return $this->pageNumber;
 	}
@@ -134,6 +126,15 @@ class DescribeTagsRequest extends \RpcAcsRequest
 	public function setPageNumber($pageNumber) {
 		$this->pageNumber = $pageNumber;
 		$this->queryParameters["PageNumber"]=$pageNumber;
+	}
+
+	public function getTags() {
+		return $this->tags;
+	}
+
+	public function setTags($tags) {
+		$this->tags = $tags;
+		$this->queryParameters["Tags"]=$tags;
 	}
 	
 }

@@ -1,128 +1,156 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Cdn\Request\V20141111;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of UpdateLiveAppSnapshotConfig
+ *
+ * @method string getTimeInterval()
+ * @method string getOssBucket()
+ * @method string getAppName()
+ * @method string getSecurityToken()
+ * @method string getDomainName()
+ * @method string getOssEndpoint()
+ * @method string getSequenceOssObject()
+ * @method string getOverwriteOssObject()
+ * @method string getOwnerId()
+ */
 class UpdateLiveAppSnapshotConfigRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Cdn", "2014-11-11", "UpdateLiveAppSnapshotConfig");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $securityToken;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Cdn',
+            '2014-11-11',
+            'UpdateLiveAppSnapshotConfig'
+        );
+    }
 
-	private  $domainName;
+    /**
+     * @param string $timeInterval
+     *
+     * @return $this
+     */
+    public function setTimeInterval($timeInterval)
+    {
+        $this->requestParameters['TimeInterval'] = $timeInterval;
+        $this->queryParameters['TimeInterval'] = $timeInterval;
 
-	private  $appName;
+        return $this;
+    }
 
-	private  $timeInterval;
+    /**
+     * @param string $ossBucket
+     *
+     * @return $this
+     */
+    public function setOssBucket($ossBucket)
+    {
+        $this->requestParameters['OssBucket'] = $ossBucket;
+        $this->queryParameters['OssBucket'] = $ossBucket;
 
-	private  $ossEndpoint;
+        return $this;
+    }
 
-	private  $ossBucket;
+    /**
+     * @param string $appName
+     *
+     * @return $this
+     */
+    public function setAppName($appName)
+    {
+        $this->requestParameters['AppName'] = $appName;
+        $this->queryParameters['AppName'] = $appName;
 
-	private  $overwriteOssObject;
+        return $this;
+    }
 
-	private  $sequenceOssObject;
+    /**
+     * @param string $securityToken
+     *
+     * @return $this
+     */
+    public function setSecurityToken($securityToken)
+    {
+        $this->requestParameters['SecurityToken'] = $securityToken;
+        $this->queryParameters['SecurityToken'] = $securityToken;
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+        return $this;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    /**
+     * @param string $domainName
+     *
+     * @return $this
+     */
+    public function setDomainName($domainName)
+    {
+        $this->requestParameters['DomainName'] = $domainName;
+        $this->queryParameters['DomainName'] = $domainName;
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+        return $this;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    /**
+     * @param string $ossEndpoint
+     *
+     * @return $this
+     */
+    public function setOssEndpoint($ossEndpoint)
+    {
+        $this->requestParameters['OssEndpoint'] = $ossEndpoint;
+        $this->queryParameters['OssEndpoint'] = $ossEndpoint;
 
-	public function getDomainName() {
-		return $this->domainName;
-	}
+        return $this;
+    }
 
-	public function setDomainName($domainName) {
-		$this->domainName = $domainName;
-		$this->queryParameters["DomainName"]=$domainName;
-	}
+    /**
+     * @param string $sequenceOssObject
+     *
+     * @return $this
+     */
+    public function setSequenceOssObject($sequenceOssObject)
+    {
+        $this->requestParameters['SequenceOssObject'] = $sequenceOssObject;
+        $this->queryParameters['SequenceOssObject'] = $sequenceOssObject;
 
-	public function getAppName() {
-		return $this->appName;
-	}
+        return $this;
+    }
 
-	public function setAppName($appName) {
-		$this->appName = $appName;
-		$this->queryParameters["AppName"]=$appName;
-	}
+    /**
+     * @param string $overwriteOssObject
+     *
+     * @return $this
+     */
+    public function setOverwriteOssObject($overwriteOssObject)
+    {
+        $this->requestParameters['OverwriteOssObject'] = $overwriteOssObject;
+        $this->queryParameters['OverwriteOssObject'] = $overwriteOssObject;
 
-	public function getTimeInterval() {
-		return $this->timeInterval;
-	}
+        return $this;
+    }
 
-	public function setTimeInterval($timeInterval) {
-		$this->timeInterval = $timeInterval;
-		$this->queryParameters["TimeInterval"]=$timeInterval;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function getOssEndpoint() {
-		return $this->ossEndpoint;
-	}
-
-	public function setOssEndpoint($ossEndpoint) {
-		$this->ossEndpoint = $ossEndpoint;
-		$this->queryParameters["OssEndpoint"]=$ossEndpoint;
-	}
-
-	public function getOssBucket() {
-		return $this->ossBucket;
-	}
-
-	public function setOssBucket($ossBucket) {
-		$this->ossBucket = $ossBucket;
-		$this->queryParameters["OssBucket"]=$ossBucket;
-	}
-
-	public function getOverwriteOssObject() {
-		return $this->overwriteOssObject;
-	}
-
-	public function setOverwriteOssObject($overwriteOssObject) {
-		$this->overwriteOssObject = $overwriteOssObject;
-		$this->queryParameters["OverwriteOssObject"]=$overwriteOssObject;
-	}
-
-	public function getSequenceOssObject() {
-		return $this->sequenceOssObject;
-	}
-
-	public function setSequenceOssObject($sequenceOssObject) {
-		$this->sequenceOssObject = $sequenceOssObject;
-		$this->queryParameters["SequenceOssObject"]=$sequenceOssObject;
-	}
-	
+        return $this;
+    }
 }

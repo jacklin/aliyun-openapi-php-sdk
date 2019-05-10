@@ -5,7 +5,7 @@ include_once ALIYUN_OPENAPI_PHP_SDK.'aliyun-php-sdk-core/Config.php';
 
 use Alidns\Request\V20150109;
 use BatchCompute\Request\V20130111;
-use Cdn\Request\V20141111;
+use Cdn\Request\V20180510;
 use CS\Request\V20151215;
 use Dm\Request\V20151123;
 use Domain\Request\V20160511;
@@ -22,6 +22,8 @@ use Slb\Request\V20140515;
 use Sms\Request\V20160827;
 use Sts\Request\V20150401;
 use Ubsms\Request\V20150623;
+
+
 /**
 * 
 */
@@ -31,7 +33,7 @@ class AliyunSdk
 	private $accessKeySecret;
 	private $appKey;
 	private $client; //对就SDK客户端对象
-	public function __construct($accessKeyId, $accessKeySecret, $appKey){
+	public function __construct($accessKeyId, $accessKeySecret, $appKey='',$regionId='cn-hangzhou'){
 			// 设置你自己的AccessKeyId/AccessSecret/AppKey
 			$this->accessKeyId = $accessKeyId;
 			$this->accessKeySecret = $accessKeySecret;

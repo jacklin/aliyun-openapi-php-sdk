@@ -1,95 +1,129 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Alidns\Request\V20150109;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of DescribeDomains
+ *
+ * @method string getGroupId()
+ * @method string getUserClientIp()
+ * @method string getPageSize()
+ * @method string getSearchMode()
+ * @method string getLang()
+ * @method string getKeyWord()
+ * @method string getPageNumber()
+ */
 class DescribeDomainsRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Alidns", "2015-01-09", "DescribeDomains");
-	}
 
-	private  $lang;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $userClientIp;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Alidns',
+            '2015-01-09',
+            'DescribeDomains',
+            'alidns'
+        );
+    }
 
-	private  $keyWord;
+    /**
+     * @param string $groupId
+     *
+     * @return $this
+     */
+    public function setGroupId($groupId)
+    {
+        $this->requestParameters['GroupId'] = $groupId;
+        $this->queryParameters['GroupId'] = $groupId;
 
-	private  $groupId;
+        return $this;
+    }
 
-	private  $pageNumber;
+    /**
+     * @param string $userClientIp
+     *
+     * @return $this
+     */
+    public function setUserClientIp($userClientIp)
+    {
+        $this->requestParameters['UserClientIp'] = $userClientIp;
+        $this->queryParameters['UserClientIp'] = $userClientIp;
 
-	private  $pageSize;
+        return $this;
+    }
 
-	public function getLang() {
-		return $this->lang;
-	}
+    /**
+     * @param string $pageSize
+     *
+     * @return $this
+     */
+    public function setPageSize($pageSize)
+    {
+        $this->requestParameters['PageSize'] = $pageSize;
+        $this->queryParameters['PageSize'] = $pageSize;
 
-	public function setLang($lang) {
-		$this->lang = $lang;
-		$this->queryParameters["Lang"]=$lang;
-	}
+        return $this;
+    }
 
-	public function getUserClientIp() {
-		return $this->userClientIp;
-	}
+    /**
+     * @param string $searchMode
+     *
+     * @return $this
+     */
+    public function setSearchMode($searchMode)
+    {
+        $this->requestParameters['SearchMode'] = $searchMode;
+        $this->queryParameters['SearchMode'] = $searchMode;
 
-	public function setUserClientIp($userClientIp) {
-		$this->userClientIp = $userClientIp;
-		$this->queryParameters["UserClientIp"]=$userClientIp;
-	}
+        return $this;
+    }
 
-	public function getKeyWord() {
-		return $this->keyWord;
-	}
+    /**
+     * @param string $lang
+     *
+     * @return $this
+     */
+    public function setLang($lang)
+    {
+        $this->requestParameters['Lang'] = $lang;
+        $this->queryParameters['Lang'] = $lang;
 
-	public function setKeyWord($keyWord) {
-		$this->keyWord = $keyWord;
-		$this->queryParameters["KeyWord"]=$keyWord;
-	}
+        return $this;
+    }
 
-	public function getGroupId() {
-		return $this->groupId;
-	}
+    /**
+     * @param string $keyWord
+     *
+     * @return $this
+     */
+    public function setKeyWord($keyWord)
+    {
+        $this->requestParameters['KeyWord'] = $keyWord;
+        $this->queryParameters['KeyWord'] = $keyWord;
 
-	public function setGroupId($groupId) {
-		$this->groupId = $groupId;
-		$this->queryParameters["GroupId"]=$groupId;
-	}
+        return $this;
+    }
 
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
+    /**
+     * @param string $pageNumber
+     *
+     * @return $this
+     */
+    public function setPageNumber($pageNumber)
+    {
+        $this->requestParameters['PageNumber'] = $pageNumber;
+        $this->queryParameters['PageNumber'] = $pageNumber;
 
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
-	}
-
-	public function getPageSize() {
-		return $this->pageSize;
-	}
-
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
-	
+        return $this;
+    }
 }

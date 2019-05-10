@@ -1,172 +1,311 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Ecs\Request\V20140526;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of RevokeSecurityGroupEgress
+ *
+ * @method string getNicType()
+ * @method string getResourceOwnerId()
+ * @method string getSourcePortRange()
+ * @method string getClientToken()
+ * @method string getSecurityGroupId()
+ * @method string getDescription()
+ * @method string getIpv6DestCidrIp()
+ * @method string getIpv6SourceCidrIp()
+ * @method string getPolicy()
+ * @method string getPortRange()
+ * @method string getResourceOwnerAccount()
+ * @method string getIpProtocol()
+ * @method string getOwnerAccount()
+ * @method string getSourceCidrIp()
+ * @method string getDestGroupId()
+ * @method string getOwnerId()
+ * @method string getDestGroupOwnerAccount()
+ * @method string getPriority()
+ * @method string getDestCidrIp()
+ * @method string getDestGroupOwnerId()
+ */
 class RevokeSecurityGroupEgressRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "RevokeSecurityGroupEgress");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $resourceOwnerAccount;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Ecs',
+            '2014-05-26',
+            'RevokeSecurityGroupEgress',
+            'ecs'
+        );
+    }
 
-	private  $resourceOwnerId;
+    /**
+     * @param string $nicType
+     *
+     * @return $this
+     */
+    public function setNicType($nicType)
+    {
+        $this->requestParameters['NicType'] = $nicType;
+        $this->queryParameters['NicType'] = $nicType;
 
-	private  $securityGroupId;
+        return $this;
+    }
 
-	private  $ipProtocol;
+    /**
+     * @param string $resourceOwnerId
+     *
+     * @return $this
+     */
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->requestParameters['ResourceOwnerId'] = $resourceOwnerId;
+        $this->queryParameters['ResourceOwnerId'] = $resourceOwnerId;
 
-	private  $portRange;
+        return $this;
+    }
 
-	private  $destGroupId;
+    /**
+     * @param string $sourcePortRange
+     *
+     * @return $this
+     */
+    public function setSourcePortRange($sourcePortRange)
+    {
+        $this->requestParameters['SourcePortRange'] = $sourcePortRange;
+        $this->queryParameters['SourcePortRange'] = $sourcePortRange;
 
-	private  $destGroupOwnerId;
+        return $this;
+    }
 
-	private  $destGroupOwnerAccount;
+    /**
+     * @param string $clientToken
+     *
+     * @return $this
+     */
+    public function setClientToken($clientToken)
+    {
+        $this->requestParameters['ClientToken'] = $clientToken;
+        $this->queryParameters['ClientToken'] = $clientToken;
 
-	private  $destCidrIp;
+        return $this;
+    }
 
-	private  $policy;
+    /**
+     * @param string $securityGroupId
+     *
+     * @return $this
+     */
+    public function setSecurityGroupId($securityGroupId)
+    {
+        $this->requestParameters['SecurityGroupId'] = $securityGroupId;
+        $this->queryParameters['SecurityGroupId'] = $securityGroupId;
 
-	private  $nicType;
+        return $this;
+    }
 
-	private  $ownerAccount;
+    /**
+     * @param string $description
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->requestParameters['Description'] = $description;
+        $this->queryParameters['Description'] = $description;
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+        return $this;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    /**
+     * @param string $ipv6DestCidrIp
+     *
+     * @return $this
+     */
+    public function setIpv6DestCidrIp($ipv6DestCidrIp)
+    {
+        $this->requestParameters['Ipv6DestCidrIp'] = $ipv6DestCidrIp;
+        $this->queryParameters['Ipv6DestCidrIp'] = $ipv6DestCidrIp;
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+        return $this;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    /**
+     * @param string $ipv6SourceCidrIp
+     *
+     * @return $this
+     */
+    public function setIpv6SourceCidrIp($ipv6SourceCidrIp)
+    {
+        $this->requestParameters['Ipv6SourceCidrIp'] = $ipv6SourceCidrIp;
+        $this->queryParameters['Ipv6SourceCidrIp'] = $ipv6SourceCidrIp;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+        return $this;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    /**
+     * @param string $policy
+     *
+     * @return $this
+     */
+    public function setPolicy($policy)
+    {
+        $this->requestParameters['Policy'] = $policy;
+        $this->queryParameters['Policy'] = $policy;
 
-	public function getSecurityGroupId() {
-		return $this->securityGroupId;
-	}
+        return $this;
+    }
 
-	public function setSecurityGroupId($securityGroupId) {
-		$this->securityGroupId = $securityGroupId;
-		$this->queryParameters["SecurityGroupId"]=$securityGroupId;
-	}
+    /**
+     * @param string $portRange
+     *
+     * @return $this
+     */
+    public function setPortRange($portRange)
+    {
+        $this->requestParameters['PortRange'] = $portRange;
+        $this->queryParameters['PortRange'] = $portRange;
 
-	public function getIpProtocol() {
-		return $this->ipProtocol;
-	}
+        return $this;
+    }
 
-	public function setIpProtocol($ipProtocol) {
-		$this->ipProtocol = $ipProtocol;
-		$this->queryParameters["IpProtocol"]=$ipProtocol;
-	}
+    /**
+     * @param string $resourceOwnerAccount
+     *
+     * @return $this
+     */
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->requestParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->queryParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
-	public function getPortRange() {
-		return $this->portRange;
-	}
+        return $this;
+    }
 
-	public function setPortRange($portRange) {
-		$this->portRange = $portRange;
-		$this->queryParameters["PortRange"]=$portRange;
-	}
+    /**
+     * @param string $ipProtocol
+     *
+     * @return $this
+     */
+    public function setIpProtocol($ipProtocol)
+    {
+        $this->requestParameters['IpProtocol'] = $ipProtocol;
+        $this->queryParameters['IpProtocol'] = $ipProtocol;
 
-	public function getDestGroupId() {
-		return $this->destGroupId;
-	}
+        return $this;
+    }
 
-	public function setDestGroupId($destGroupId) {
-		$this->destGroupId = $destGroupId;
-		$this->queryParameters["DestGroupId"]=$destGroupId;
-	}
+    /**
+     * @param string $ownerAccount
+     *
+     * @return $this
+     */
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->requestParameters['OwnerAccount'] = $ownerAccount;
+        $this->queryParameters['OwnerAccount'] = $ownerAccount;
 
-	public function getDestGroupOwnerId() {
-		return $this->destGroupOwnerId;
-	}
+        return $this;
+    }
 
-	public function setDestGroupOwnerId($destGroupOwnerId) {
-		$this->destGroupOwnerId = $destGroupOwnerId;
-		$this->queryParameters["DestGroupOwnerId"]=$destGroupOwnerId;
-	}
+    /**
+     * @param string $sourceCidrIp
+     *
+     * @return $this
+     */
+    public function setSourceCidrIp($sourceCidrIp)
+    {
+        $this->requestParameters['SourceCidrIp'] = $sourceCidrIp;
+        $this->queryParameters['SourceCidrIp'] = $sourceCidrIp;
 
-	public function getDestGroupOwnerAccount() {
-		return $this->destGroupOwnerAccount;
-	}
+        return $this;
+    }
 
-	public function setDestGroupOwnerAccount($destGroupOwnerAccount) {
-		$this->destGroupOwnerAccount = $destGroupOwnerAccount;
-		$this->queryParameters["DestGroupOwnerAccount"]=$destGroupOwnerAccount;
-	}
+    /**
+     * @param string $destGroupId
+     *
+     * @return $this
+     */
+    public function setDestGroupId($destGroupId)
+    {
+        $this->requestParameters['DestGroupId'] = $destGroupId;
+        $this->queryParameters['DestGroupId'] = $destGroupId;
 
-	public function getDestCidrIp() {
-		return $this->destCidrIp;
-	}
+        return $this;
+    }
 
-	public function setDestCidrIp($destCidrIp) {
-		$this->destCidrIp = $destCidrIp;
-		$this->queryParameters["DestCidrIp"]=$destCidrIp;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function getPolicy() {
-		return $this->policy;
-	}
+        return $this;
+    }
 
-	public function setPolicy($policy) {
-		$this->policy = $policy;
-		$this->queryParameters["Policy"]=$policy;
-	}
+    /**
+     * @param string $destGroupOwnerAccount
+     *
+     * @return $this
+     */
+    public function setDestGroupOwnerAccount($destGroupOwnerAccount)
+    {
+        $this->requestParameters['DestGroupOwnerAccount'] = $destGroupOwnerAccount;
+        $this->queryParameters['DestGroupOwnerAccount'] = $destGroupOwnerAccount;
 
-	public function getNicType() {
-		return $this->nicType;
-	}
+        return $this;
+    }
 
-	public function setNicType($nicType) {
-		$this->nicType = $nicType;
-		$this->queryParameters["NicType"]=$nicType;
-	}
+    /**
+     * @param string $priority
+     *
+     * @return $this
+     */
+    public function setPriority($priority)
+    {
+        $this->requestParameters['Priority'] = $priority;
+        $this->queryParameters['Priority'] = $priority;
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+        return $this;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
-	
+    /**
+     * @param string $destCidrIp
+     *
+     * @return $this
+     */
+    public function setDestCidrIp($destCidrIp)
+    {
+        $this->requestParameters['DestCidrIp'] = $destCidrIp;
+        $this->queryParameters['DestCidrIp'] = $destCidrIp;
+
+        return $this;
+    }
+
+    /**
+     * @param string $destGroupOwnerId
+     *
+     * @return $this
+     */
+    public function setDestGroupOwnerId($destGroupOwnerId)
+    {
+        $this->requestParameters['DestGroupOwnerId'] = $destGroupOwnerId;
+        $this->queryParameters['DestGroupOwnerId'] = $destGroupOwnerId;
+
+        return $this;
+    }
 }

@@ -1,425 +1,498 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Ecs\Request\V20140526;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of DescribeDisks
+ *
+ * @method string getResourceOwnerId()
+ * @method string getSnapshotId()
+ * @method string getFilter2Value()
+ * @method string getAutoSnapshotPolicyId()
+ * @method string getPageNumber()
+ * @method string getDiskName()
+ * @method string getDeleteAutoSnapshot()
+ * @method string getResourceGroupId()
+ * @method string getDiskChargeType()
+ * @method string getLockReason()
+ * @method string getFilter1Key()
+ * @method string getPageSize()
+ * @method string getDiskIds()
+ * @method array getTags()
+ * @method string getDeleteWithInstance()
+ * @method string getEnableAutoSnapshot()
+ * @method string getDryRun()
+ * @method string getResourceOwnerAccount()
+ * @method string getOwnerAccount()
+ * @method string getFilter1Value()
+ * @method string getPortable()
+ * @method string getEnableAutomatedSnapshotPolicy()
+ * @method string getFilter2Key()
+ * @method string getOwnerId()
+ * @method string getDiskType()
+ * @method array getAdditionalAttributess()
+ * @method string getEnableShared()
+ * @method string getInstanceId()
+ * @method string getEncrypted()
+ * @method string getZoneId()
+ * @method string getCategory()
+ * @method string getKMSKeyId()
+ * @method string getStatus()
+ */
 class DescribeDisksRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeDisks");
-	}
 
-	private  $ownerId;
-
-	private  $resourceOwnerAccount;
-
-	private  $resourceOwnerId;
-
-	private  $zoneId;
-
-	private  $diskIds;
-
-	private  $instanceId;
-
-	private  $diskType;
-
-	private  $category;
-
-	private  $status;
-
-	private  $snapshotId;
-
-	private  $portable;
-
-	private  $deleteWithInstance;
-
-	private  $deleteAutoSnapshot;
-
-	private  $pageNumber;
-
-	private  $pageSize;
-
-	private  $ownerAccount;
-
-	private  $diskName;
-
-	private  $autoSnapshotPolicyId;
-
-	private  $enableAutoSnapshot;
-
-	private  $enableAutomatedSnapshotPolicy;
-
-	private  $diskChargeType;
-
-	private  $lockReason;
-
-	private  $filter1Key;
-
-	private  $filter2Key;
-
-	private  $filter1Value;
-
-	private  $filter2Value;
-
-	private  $tag1Key;
-
-	private  $tag2Key;
-
-	private  $tag3Key;
-
-	private  $tag4Key;
-
-	private  $tag5Key;
-
-	private  $tag1Value;
-
-	private  $tag2Value;
-
-	private  $tag3Value;
-
-	private  $tag4Value;
-
-	private  $tag5Value;
-
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
-
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
-
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
-
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
-
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
-
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
-
-	public function getZoneId() {
-		return $this->zoneId;
-	}
-
-	public function setZoneId($zoneId) {
-		$this->zoneId = $zoneId;
-		$this->queryParameters["ZoneId"]=$zoneId;
-	}
-
-	public function getDiskIds() {
-		return $this->diskIds;
-	}
-
-	public function setDiskIds($diskIds) {
-		$this->diskIds = $diskIds;
-		$this->queryParameters["DiskIds"]=$diskIds;
-	}
-
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
-
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
-
-	public function getDiskType() {
-		return $this->diskType;
-	}
-
-	public function setDiskType($diskType) {
-		$this->diskType = $diskType;
-		$this->queryParameters["DiskType"]=$diskType;
-	}
-
-	public function getCategory() {
-		return $this->category;
-	}
-
-	public function setCategory($category) {
-		$this->category = $category;
-		$this->queryParameters["Category"]=$category;
-	}
-
-	public function getStatus() {
-		return $this->status;
-	}
-
-	public function setStatus($status) {
-		$this->status = $status;
-		$this->queryParameters["Status"]=$status;
-	}
-
-	public function getSnapshotId() {
-		return $this->snapshotId;
-	}
-
-	public function setSnapshotId($snapshotId) {
-		$this->snapshotId = $snapshotId;
-		$this->queryParameters["SnapshotId"]=$snapshotId;
-	}
-
-	public function getPortable() {
-		return $this->portable;
-	}
-
-	public function setPortable($portable) {
-		$this->portable = $portable;
-		$this->queryParameters["Portable"]=$portable;
-	}
-
-	public function getDeleteWithInstance() {
-		return $this->deleteWithInstance;
-	}
-
-	public function setDeleteWithInstance($deleteWithInstance) {
-		$this->deleteWithInstance = $deleteWithInstance;
-		$this->queryParameters["DeleteWithInstance"]=$deleteWithInstance;
-	}
-
-	public function getDeleteAutoSnapshot() {
-		return $this->deleteAutoSnapshot;
-	}
-
-	public function setDeleteAutoSnapshot($deleteAutoSnapshot) {
-		$this->deleteAutoSnapshot = $deleteAutoSnapshot;
-		$this->queryParameters["DeleteAutoSnapshot"]=$deleteAutoSnapshot;
-	}
-
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
-
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
-	}
-
-	public function getPageSize() {
-		return $this->pageSize;
-	}
-
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
-
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
-
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
-
-	public function getDiskName() {
-		return $this->diskName;
-	}
-
-	public function setDiskName($diskName) {
-		$this->diskName = $diskName;
-		$this->queryParameters["DiskName"]=$diskName;
-	}
-
-	public function getAutoSnapshotPolicyId() {
-		return $this->autoSnapshotPolicyId;
-	}
-
-	public function setAutoSnapshotPolicyId($autoSnapshotPolicyId) {
-		$this->autoSnapshotPolicyId = $autoSnapshotPolicyId;
-		$this->queryParameters["AutoSnapshotPolicyId"]=$autoSnapshotPolicyId;
-	}
-
-	public function getEnableAutoSnapshot() {
-		return $this->enableAutoSnapshot;
-	}
-
-	public function setEnableAutoSnapshot($enableAutoSnapshot) {
-		$this->enableAutoSnapshot = $enableAutoSnapshot;
-		$this->queryParameters["EnableAutoSnapshot"]=$enableAutoSnapshot;
-	}
-
-	public function getEnableAutomatedSnapshotPolicy() {
-		return $this->enableAutomatedSnapshotPolicy;
-	}
-
-	public function setEnableAutomatedSnapshotPolicy($enableAutomatedSnapshotPolicy) {
-		$this->enableAutomatedSnapshotPolicy = $enableAutomatedSnapshotPolicy;
-		$this->queryParameters["EnableAutomatedSnapshotPolicy"]=$enableAutomatedSnapshotPolicy;
-	}
-
-	public function getDiskChargeType() {
-		return $this->diskChargeType;
-	}
-
-	public function setDiskChargeType($diskChargeType) {
-		$this->diskChargeType = $diskChargeType;
-		$this->queryParameters["DiskChargeType"]=$diskChargeType;
-	}
-
-	public function getLockReason() {
-		return $this->lockReason;
-	}
-
-	public function setLockReason($lockReason) {
-		$this->lockReason = $lockReason;
-		$this->queryParameters["LockReason"]=$lockReason;
-	}
-
-	public function getFilter1Key() {
-		return $this->filter1Key;
-	}
-
-	public function setFilter1Key($filter1Key) {
-		$this->filter1Key = $filter1Key;
-		$this->queryParameters["Filter.1.Key"]=$filter1Key;
-	}
-
-	public function getFilter2Key() {
-		return $this->filter2Key;
-	}
-
-	public function setFilter2Key($filter2Key) {
-		$this->filter2Key = $filter2Key;
-		$this->queryParameters["Filter.2.Key"]=$filter2Key;
-	}
-
-	public function getFilter1Value() {
-		return $this->filter1Value;
-	}
-
-	public function setFilter1Value($filter1Value) {
-		$this->filter1Value = $filter1Value;
-		$this->queryParameters["Filter.1.Value"]=$filter1Value;
-	}
-
-	public function getFilter2Value() {
-		return $this->filter2Value;
-	}
-
-	public function setFilter2Value($filter2Value) {
-		$this->filter2Value = $filter2Value;
-		$this->queryParameters["Filter.2.Value"]=$filter2Value;
-	}
-
-	public function getTag1Key() {
-		return $this->tag1Key;
-	}
-
-	public function setTag1Key($tag1Key) {
-		$this->tag1Key = $tag1Key;
-		$this->queryParameters["Tag.1.Key"]=$tag1Key;
-	}
-
-	public function getTag2Key() {
-		return $this->tag2Key;
-	}
-
-	public function setTag2Key($tag2Key) {
-		$this->tag2Key = $tag2Key;
-		$this->queryParameters["Tag.2.Key"]=$tag2Key;
-	}
-
-	public function getTag3Key() {
-		return $this->tag3Key;
-	}
-
-	public function setTag3Key($tag3Key) {
-		$this->tag3Key = $tag3Key;
-		$this->queryParameters["Tag.3.Key"]=$tag3Key;
-	}
-
-	public function getTag4Key() {
-		return $this->tag4Key;
-	}
-
-	public function setTag4Key($tag4Key) {
-		$this->tag4Key = $tag4Key;
-		$this->queryParameters["Tag.4.Key"]=$tag4Key;
-	}
-
-	public function getTag5Key() {
-		return $this->tag5Key;
-	}
-
-	public function setTag5Key($tag5Key) {
-		$this->tag5Key = $tag5Key;
-		$this->queryParameters["Tag.5.Key"]=$tag5Key;
-	}
-
-	public function getTag1Value() {
-		return $this->tag1Value;
-	}
-
-	public function setTag1Value($tag1Value) {
-		$this->tag1Value = $tag1Value;
-		$this->queryParameters["Tag.1.Value"]=$tag1Value;
-	}
-
-	public function getTag2Value() {
-		return $this->tag2Value;
-	}
-
-	public function setTag2Value($tag2Value) {
-		$this->tag2Value = $tag2Value;
-		$this->queryParameters["Tag.2.Value"]=$tag2Value;
-	}
-
-	public function getTag3Value() {
-		return $this->tag3Value;
-	}
-
-	public function setTag3Value($tag3Value) {
-		$this->tag3Value = $tag3Value;
-		$this->queryParameters["Tag.3.Value"]=$tag3Value;
-	}
-
-	public function getTag4Value() {
-		return $this->tag4Value;
-	}
-
-	public function setTag4Value($tag4Value) {
-		$this->tag4Value = $tag4Value;
-		$this->queryParameters["Tag.4.Value"]=$tag4Value;
-	}
-
-	public function getTag5Value() {
-		return $this->tag5Value;
-	}
-
-	public function setTag5Value($tag5Value) {
-		$this->tag5Value = $tag5Value;
-		$this->queryParameters["Tag.5.Value"]=$tag5Value;
-	}
-	
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
+
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Ecs',
+            '2014-05-26',
+            'DescribeDisks',
+            'ecs'
+        );
+    }
+
+    /**
+     * @param string $resourceOwnerId
+     *
+     * @return $this
+     */
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->requestParameters['ResourceOwnerId'] = $resourceOwnerId;
+        $this->queryParameters['ResourceOwnerId'] = $resourceOwnerId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $snapshotId
+     *
+     * @return $this
+     */
+    public function setSnapshotId($snapshotId)
+    {
+        $this->requestParameters['SnapshotId'] = $snapshotId;
+        $this->queryParameters['SnapshotId'] = $snapshotId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $filter2Value
+     *
+     * @return $this
+     */
+    public function setFilter2Value($filter2Value)
+    {
+        $this->requestParameters['Filter2Value'] = $filter2Value;
+        $this->queryParameters['Filter.2.Value'] = $filter2Value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $autoSnapshotPolicyId
+     *
+     * @return $this
+     */
+    public function setAutoSnapshotPolicyId($autoSnapshotPolicyId)
+    {
+        $this->requestParameters['AutoSnapshotPolicyId'] = $autoSnapshotPolicyId;
+        $this->queryParameters['AutoSnapshotPolicyId'] = $autoSnapshotPolicyId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $pageNumber
+     *
+     * @return $this
+     */
+    public function setPageNumber($pageNumber)
+    {
+        $this->requestParameters['PageNumber'] = $pageNumber;
+        $this->queryParameters['PageNumber'] = $pageNumber;
+
+        return $this;
+    }
+
+    /**
+     * @param string $diskName
+     *
+     * @return $this
+     */
+    public function setDiskName($diskName)
+    {
+        $this->requestParameters['DiskName'] = $diskName;
+        $this->queryParameters['DiskName'] = $diskName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $deleteAutoSnapshot
+     *
+     * @return $this
+     */
+    public function setDeleteAutoSnapshot($deleteAutoSnapshot)
+    {
+        $this->requestParameters['DeleteAutoSnapshot'] = $deleteAutoSnapshot;
+        $this->queryParameters['DeleteAutoSnapshot'] = $deleteAutoSnapshot;
+
+        return $this;
+    }
+
+    /**
+     * @param string $resourceGroupId
+     *
+     * @return $this
+     */
+    public function setResourceGroupId($resourceGroupId)
+    {
+        $this->requestParameters['ResourceGroupId'] = $resourceGroupId;
+        $this->queryParameters['ResourceGroupId'] = $resourceGroupId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $diskChargeType
+     *
+     * @return $this
+     */
+    public function setDiskChargeType($diskChargeType)
+    {
+        $this->requestParameters['DiskChargeType'] = $diskChargeType;
+        $this->queryParameters['DiskChargeType'] = $diskChargeType;
+
+        return $this;
+    }
+
+    /**
+     * @param string $lockReason
+     *
+     * @return $this
+     */
+    public function setLockReason($lockReason)
+    {
+        $this->requestParameters['LockReason'] = $lockReason;
+        $this->queryParameters['LockReason'] = $lockReason;
+
+        return $this;
+    }
+
+    /**
+     * @param string $filter1Key
+     *
+     * @return $this
+     */
+    public function setFilter1Key($filter1Key)
+    {
+        $this->requestParameters['Filter1Key'] = $filter1Key;
+        $this->queryParameters['Filter.1.Key'] = $filter1Key;
+
+        return $this;
+    }
+
+    /**
+     * @param string $pageSize
+     *
+     * @return $this
+     */
+    public function setPageSize($pageSize)
+    {
+        $this->requestParameters['PageSize'] = $pageSize;
+        $this->queryParameters['PageSize'] = $pageSize;
+
+        return $this;
+    }
+
+    /**
+     * @param string $diskIds
+     *
+     * @return $this
+     */
+    public function setDiskIds($diskIds)
+    {
+        $this->requestParameters['DiskIds'] = $diskIds;
+        $this->queryParameters['DiskIds'] = $diskIds;
+
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function setTags(array $tag)
+    {
+        $this->requestParameters['Tags'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->queryParameters['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->queryParameters['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $deleteWithInstance
+     *
+     * @return $this
+     */
+    public function setDeleteWithInstance($deleteWithInstance)
+    {
+        $this->requestParameters['DeleteWithInstance'] = $deleteWithInstance;
+        $this->queryParameters['DeleteWithInstance'] = $deleteWithInstance;
+
+        return $this;
+    }
+
+    /**
+     * @param string $enableAutoSnapshot
+     *
+     * @return $this
+     */
+    public function setEnableAutoSnapshot($enableAutoSnapshot)
+    {
+        $this->requestParameters['EnableAutoSnapshot'] = $enableAutoSnapshot;
+        $this->queryParameters['EnableAutoSnapshot'] = $enableAutoSnapshot;
+
+        return $this;
+    }
+
+    /**
+     * @param string $dryRun
+     *
+     * @return $this
+     */
+    public function setDryRun($dryRun)
+    {
+        $this->requestParameters['DryRun'] = $dryRun;
+        $this->queryParameters['DryRun'] = $dryRun;
+
+        return $this;
+    }
+
+    /**
+     * @param string $resourceOwnerAccount
+     *
+     * @return $this
+     */
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->requestParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->queryParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ownerAccount
+     *
+     * @return $this
+     */
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->requestParameters['OwnerAccount'] = $ownerAccount;
+        $this->queryParameters['OwnerAccount'] = $ownerAccount;
+
+        return $this;
+    }
+
+    /**
+     * @param string $filter1Value
+     *
+     * @return $this
+     */
+    public function setFilter1Value($filter1Value)
+    {
+        $this->requestParameters['Filter1Value'] = $filter1Value;
+        $this->queryParameters['Filter.1.Value'] = $filter1Value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $portable
+     *
+     * @return $this
+     */
+    public function setPortable($portable)
+    {
+        $this->requestParameters['Portable'] = $portable;
+        $this->queryParameters['Portable'] = $portable;
+
+        return $this;
+    }
+
+    /**
+     * @param string $enableAutomatedSnapshotPolicy
+     *
+     * @return $this
+     */
+    public function setEnableAutomatedSnapshotPolicy($enableAutomatedSnapshotPolicy)
+    {
+        $this->requestParameters['EnableAutomatedSnapshotPolicy'] = $enableAutomatedSnapshotPolicy;
+        $this->queryParameters['EnableAutomatedSnapshotPolicy'] = $enableAutomatedSnapshotPolicy;
+
+        return $this;
+    }
+
+    /**
+     * @param string $filter2Key
+     *
+     * @return $this
+     */
+    public function setFilter2Key($filter2Key)
+    {
+        $this->requestParameters['Filter2Key'] = $filter2Key;
+        $this->queryParameters['Filter.2.Key'] = $filter2Key;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $diskType
+     *
+     * @return $this
+     */
+    public function setDiskType($diskType)
+    {
+        $this->requestParameters['DiskType'] = $diskType;
+        $this->queryParameters['DiskType'] = $diskType;
+
+        return $this;
+    }
+
+    /**
+     * @param array $additionalAttributes
+     *
+     * @return $this
+     */
+    public function setAdditionalAttributess(array $additionalAttributes)
+    {
+        $this->requestParameters['AdditionalAttributess'] = $additionalAttributes;
+        foreach ($additionalAttributes as $i => $iValue) {
+            $this->queryParameters['AdditionalAttributes.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $enableShared
+     *
+     * @return $this
+     */
+    public function setEnableShared($enableShared)
+    {
+        $this->requestParameters['EnableShared'] = $enableShared;
+        $this->queryParameters['EnableShared'] = $enableShared;
+
+        return $this;
+    }
+
+    /**
+     * @param string $instanceId
+     *
+     * @return $this
+     */
+    public function setInstanceId($instanceId)
+    {
+        $this->requestParameters['InstanceId'] = $instanceId;
+        $this->queryParameters['InstanceId'] = $instanceId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $encrypted
+     *
+     * @return $this
+     */
+    public function setEncrypted($encrypted)
+    {
+        $this->requestParameters['Encrypted'] = $encrypted;
+        $this->queryParameters['Encrypted'] = $encrypted;
+
+        return $this;
+    }
+
+    /**
+     * @param string $zoneId
+     *
+     * @return $this
+     */
+    public function setZoneId($zoneId)
+    {
+        $this->requestParameters['ZoneId'] = $zoneId;
+        $this->queryParameters['ZoneId'] = $zoneId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $category
+     *
+     * @return $this
+     */
+    public function setCategory($category)
+    {
+        $this->requestParameters['Category'] = $category;
+        $this->queryParameters['Category'] = $category;
+
+        return $this;
+    }
+
+    /**
+     * @param string $kMSKeyId
+     *
+     * @return $this
+     */
+    public function setKMSKeyId($kMSKeyId)
+    {
+        $this->requestParameters['KMSKeyId'] = $kMSKeyId;
+        $this->queryParameters['KMSKeyId'] = $kMSKeyId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $status
+     *
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->requestParameters['Status'] = $status;
+        $this->queryParameters['Status'] = $status;
+
+        return $this;
+    }
 }

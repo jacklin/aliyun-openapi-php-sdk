@@ -1,161 +1,199 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Ecs\Request\V20140526;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of ModifyAutoSnapshotPolicy
+ *
+ * @method string getDataDiskPolicyEnabled()
+ * @method string getResourceOwnerId()
+ * @method string getDataDiskPolicyRetentionDays()
+ * @method string getResourceOwnerAccount()
+ * @method string getSystemDiskPolicyRetentionLastWeek()
+ * @method string getOwnerAccount()
+ * @method string getSystemDiskPolicyTimePeriod()
+ * @method string getOwnerId()
+ * @method string getDataDiskPolicyRetentionLastWeek()
+ * @method string getSystemDiskPolicyRetentionDays()
+ * @method string getDataDiskPolicyTimePeriod()
+ * @method string getSystemDiskPolicyEnabled()
+ */
 class ModifyAutoSnapshotPolicyRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyAutoSnapshotPolicy");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $resourceOwnerAccount;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Ecs',
+            '2014-05-26',
+            'ModifyAutoSnapshotPolicy',
+            'ecs'
+        );
+    }
 
-	private  $resourceOwnerId;
+    /**
+     * @param string $dataDiskPolicyEnabled
+     *
+     * @return $this
+     */
+    public function setDataDiskPolicyEnabled($dataDiskPolicyEnabled)
+    {
+        $this->requestParameters['DataDiskPolicyEnabled'] = $dataDiskPolicyEnabled;
+        $this->queryParameters['DataDiskPolicyEnabled'] = $dataDiskPolicyEnabled;
 
-	private  $systemDiskPolicyEnabled;
+        return $this;
+    }
 
-	private  $systemDiskPolicyTimePeriod;
+    /**
+     * @param string $resourceOwnerId
+     *
+     * @return $this
+     */
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->requestParameters['ResourceOwnerId'] = $resourceOwnerId;
+        $this->queryParameters['ResourceOwnerId'] = $resourceOwnerId;
 
-	private  $systemDiskPolicyRetentionDays;
+        return $this;
+    }
 
-	private  $systemDiskPolicyRetentionLastWeek;
+    /**
+     * @param string $dataDiskPolicyRetentionDays
+     *
+     * @return $this
+     */
+    public function setDataDiskPolicyRetentionDays($dataDiskPolicyRetentionDays)
+    {
+        $this->requestParameters['DataDiskPolicyRetentionDays'] = $dataDiskPolicyRetentionDays;
+        $this->queryParameters['DataDiskPolicyRetentionDays'] = $dataDiskPolicyRetentionDays;
 
-	private  $dataDiskPolicyEnabled;
+        return $this;
+    }
 
-	private  $dataDiskPolicyTimePeriod;
+    /**
+     * @param string $resourceOwnerAccount
+     *
+     * @return $this
+     */
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->requestParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->queryParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
-	private  $dataDiskPolicyRetentionDays;
+        return $this;
+    }
 
-	private  $dataDiskPolicyRetentionLastWeek;
+    /**
+     * @param string $systemDiskPolicyRetentionLastWeek
+     *
+     * @return $this
+     */
+    public function setSystemDiskPolicyRetentionLastWeek($systemDiskPolicyRetentionLastWeek)
+    {
+        $this->requestParameters['SystemDiskPolicyRetentionLastWeek'] = $systemDiskPolicyRetentionLastWeek;
+        $this->queryParameters['SystemDiskPolicyRetentionLastWeek'] = $systemDiskPolicyRetentionLastWeek;
 
-	private  $ownerAccount;
+        return $this;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    /**
+     * @param string $ownerAccount
+     *
+     * @return $this
+     */
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->requestParameters['OwnerAccount'] = $ownerAccount;
+        $this->queryParameters['OwnerAccount'] = $ownerAccount;
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+        return $this;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    /**
+     * @param string $systemDiskPolicyTimePeriod
+     *
+     * @return $this
+     */
+    public function setSystemDiskPolicyTimePeriod($systemDiskPolicyTimePeriod)
+    {
+        $this->requestParameters['SystemDiskPolicyTimePeriod'] = $systemDiskPolicyTimePeriod;
+        $this->queryParameters['SystemDiskPolicyTimePeriod'] = $systemDiskPolicyTimePeriod;
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+        return $this;
+    }
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+        return $this;
+    }
 
-	public function getSystemDiskPolicyEnabled() {
-		return $this->systemDiskPolicyEnabled;
-	}
+    /**
+     * @param string $dataDiskPolicyRetentionLastWeek
+     *
+     * @return $this
+     */
+    public function setDataDiskPolicyRetentionLastWeek($dataDiskPolicyRetentionLastWeek)
+    {
+        $this->requestParameters['DataDiskPolicyRetentionLastWeek'] = $dataDiskPolicyRetentionLastWeek;
+        $this->queryParameters['DataDiskPolicyRetentionLastWeek'] = $dataDiskPolicyRetentionLastWeek;
 
-	public function setSystemDiskPolicyEnabled($systemDiskPolicyEnabled) {
-		$this->systemDiskPolicyEnabled = $systemDiskPolicyEnabled;
-		$this->queryParameters["SystemDiskPolicyEnabled"]=$systemDiskPolicyEnabled;
-	}
+        return $this;
+    }
 
-	public function getSystemDiskPolicyTimePeriod() {
-		return $this->systemDiskPolicyTimePeriod;
-	}
+    /**
+     * @param string $systemDiskPolicyRetentionDays
+     *
+     * @return $this
+     */
+    public function setSystemDiskPolicyRetentionDays($systemDiskPolicyRetentionDays)
+    {
+        $this->requestParameters['SystemDiskPolicyRetentionDays'] = $systemDiskPolicyRetentionDays;
+        $this->queryParameters['SystemDiskPolicyRetentionDays'] = $systemDiskPolicyRetentionDays;
 
-	public function setSystemDiskPolicyTimePeriod($systemDiskPolicyTimePeriod) {
-		$this->systemDiskPolicyTimePeriod = $systemDiskPolicyTimePeriod;
-		$this->queryParameters["SystemDiskPolicyTimePeriod"]=$systemDiskPolicyTimePeriod;
-	}
+        return $this;
+    }
 
-	public function getSystemDiskPolicyRetentionDays() {
-		return $this->systemDiskPolicyRetentionDays;
-	}
+    /**
+     * @param string $dataDiskPolicyTimePeriod
+     *
+     * @return $this
+     */
+    public function setDataDiskPolicyTimePeriod($dataDiskPolicyTimePeriod)
+    {
+        $this->requestParameters['DataDiskPolicyTimePeriod'] = $dataDiskPolicyTimePeriod;
+        $this->queryParameters['DataDiskPolicyTimePeriod'] = $dataDiskPolicyTimePeriod;
 
-	public function setSystemDiskPolicyRetentionDays($systemDiskPolicyRetentionDays) {
-		$this->systemDiskPolicyRetentionDays = $systemDiskPolicyRetentionDays;
-		$this->queryParameters["SystemDiskPolicyRetentionDays"]=$systemDiskPolicyRetentionDays;
-	}
+        return $this;
+    }
 
-	public function getSystemDiskPolicyRetentionLastWeek() {
-		return $this->systemDiskPolicyRetentionLastWeek;
-	}
+    /**
+     * @param string $systemDiskPolicyEnabled
+     *
+     * @return $this
+     */
+    public function setSystemDiskPolicyEnabled($systemDiskPolicyEnabled)
+    {
+        $this->requestParameters['SystemDiskPolicyEnabled'] = $systemDiskPolicyEnabled;
+        $this->queryParameters['SystemDiskPolicyEnabled'] = $systemDiskPolicyEnabled;
 
-	public function setSystemDiskPolicyRetentionLastWeek($systemDiskPolicyRetentionLastWeek) {
-		$this->systemDiskPolicyRetentionLastWeek = $systemDiskPolicyRetentionLastWeek;
-		$this->queryParameters["SystemDiskPolicyRetentionLastWeek"]=$systemDiskPolicyRetentionLastWeek;
-	}
-
-	public function getDataDiskPolicyEnabled() {
-		return $this->dataDiskPolicyEnabled;
-	}
-
-	public function setDataDiskPolicyEnabled($dataDiskPolicyEnabled) {
-		$this->dataDiskPolicyEnabled = $dataDiskPolicyEnabled;
-		$this->queryParameters["DataDiskPolicyEnabled"]=$dataDiskPolicyEnabled;
-	}
-
-	public function getDataDiskPolicyTimePeriod() {
-		return $this->dataDiskPolicyTimePeriod;
-	}
-
-	public function setDataDiskPolicyTimePeriod($dataDiskPolicyTimePeriod) {
-		$this->dataDiskPolicyTimePeriod = $dataDiskPolicyTimePeriod;
-		$this->queryParameters["DataDiskPolicyTimePeriod"]=$dataDiskPolicyTimePeriod;
-	}
-
-	public function getDataDiskPolicyRetentionDays() {
-		return $this->dataDiskPolicyRetentionDays;
-	}
-
-	public function setDataDiskPolicyRetentionDays($dataDiskPolicyRetentionDays) {
-		$this->dataDiskPolicyRetentionDays = $dataDiskPolicyRetentionDays;
-		$this->queryParameters["DataDiskPolicyRetentionDays"]=$dataDiskPolicyRetentionDays;
-	}
-
-	public function getDataDiskPolicyRetentionLastWeek() {
-		return $this->dataDiskPolicyRetentionLastWeek;
-	}
-
-	public function setDataDiskPolicyRetentionLastWeek($dataDiskPolicyRetentionLastWeek) {
-		$this->dataDiskPolicyRetentionLastWeek = $dataDiskPolicyRetentionLastWeek;
-		$this->queryParameters["DataDiskPolicyRetentionLastWeek"]=$dataDiskPolicyRetentionLastWeek;
-	}
-
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
-
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
-	
+        return $this;
+    }
 }

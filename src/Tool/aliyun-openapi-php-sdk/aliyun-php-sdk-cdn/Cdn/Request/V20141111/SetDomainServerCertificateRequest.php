@@ -1,117 +1,170 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Cdn\Request\V20141111;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of SetDomainServerCertificate
+ *
+ * @method string getPrivateKey()
+ * @method string getForceSet()
+ * @method string getServerCertificateStatus()
+ * @method string getServerCertificate()
+ * @method string getSecurityToken()
+ * @method string getCertType()
+ * @method string getCertName()
+ * @method string getDomainName()
+ * @method string getOwnerId()
+ * @method string getRegion()
+ */
 class SetDomainServerCertificateRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Cdn", "2014-11-11", "SetDomainServerCertificate");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $securityToken;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Cdn',
+            '2014-11-11',
+            'SetDomainServerCertificate'
+        );
+    }
 
-	private  $domainName;
+    /**
+     * @param string $privateKey
+     *
+     * @return $this
+     */
+    public function setPrivateKey($privateKey)
+    {
+        $this->requestParameters['PrivateKey'] = $privateKey;
+        $this->queryParameters['PrivateKey'] = $privateKey;
 
-	private  $certName;
+        return $this;
+    }
 
-	private  $serverCertificateStatus;
+    /**
+     * @param string $forceSet
+     *
+     * @return $this
+     */
+    public function setForceSet($forceSet)
+    {
+        $this->requestParameters['ForceSet'] = $forceSet;
+        $this->queryParameters['ForceSet'] = $forceSet;
 
-	private  $serverCertificate;
+        return $this;
+    }
 
-	private  $privateKey;
+    /**
+     * @param string $serverCertificateStatus
+     *
+     * @return $this
+     */
+    public function setServerCertificateStatus($serverCertificateStatus)
+    {
+        $this->requestParameters['ServerCertificateStatus'] = $serverCertificateStatus;
+        $this->queryParameters['ServerCertificateStatus'] = $serverCertificateStatus;
 
-	private  $region;
+        return $this;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    /**
+     * @param string $serverCertificate
+     *
+     * @return $this
+     */
+    public function setServerCertificate($serverCertificate)
+    {
+        $this->requestParameters['ServerCertificate'] = $serverCertificate;
+        $this->queryParameters['ServerCertificate'] = $serverCertificate;
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+        return $this;
+    }
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+    /**
+     * @param string $securityToken
+     *
+     * @return $this
+     */
+    public function setSecurityToken($securityToken)
+    {
+        $this->requestParameters['SecurityToken'] = $securityToken;
+        $this->queryParameters['SecurityToken'] = $securityToken;
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+        return $this;
+    }
 
-	public function getDomainName() {
-		return $this->domainName;
-	}
+    /**
+     * @param string $certType
+     *
+     * @return $this
+     */
+    public function setCertType($certType)
+    {
+        $this->requestParameters['CertType'] = $certType;
+        $this->queryParameters['CertType'] = $certType;
 
-	public function setDomainName($domainName) {
-		$this->domainName = $domainName;
-		$this->queryParameters["DomainName"]=$domainName;
-	}
+        return $this;
+    }
 
-	public function getCertName() {
-		return $this->certName;
-	}
+    /**
+     * @param string $certName
+     *
+     * @return $this
+     */
+    public function setCertName($certName)
+    {
+        $this->requestParameters['CertName'] = $certName;
+        $this->queryParameters['CertName'] = $certName;
 
-	public function setCertName($certName) {
-		$this->certName = $certName;
-		$this->queryParameters["CertName"]=$certName;
-	}
+        return $this;
+    }
 
-	public function getServerCertificateStatus() {
-		return $this->serverCertificateStatus;
-	}
+    /**
+     * @param string $domainName
+     *
+     * @return $this
+     */
+    public function setDomainName($domainName)
+    {
+        $this->requestParameters['DomainName'] = $domainName;
+        $this->queryParameters['DomainName'] = $domainName;
 
-	public function setServerCertificateStatus($serverCertificateStatus) {
-		$this->serverCertificateStatus = $serverCertificateStatus;
-		$this->queryParameters["ServerCertificateStatus"]=$serverCertificateStatus;
-	}
+        return $this;
+    }
 
-	public function getServerCertificate() {
-		return $this->serverCertificate;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function setServerCertificate($serverCertificate) {
-		$this->serverCertificate = $serverCertificate;
-		$this->queryParameters["ServerCertificate"]=$serverCertificate;
-	}
+        return $this;
+    }
 
-	public function getPrivateKey() {
-		return $this->privateKey;
-	}
+    /**
+     * @param string $region
+     *
+     * @return $this
+     */
+    public function setRegion($region)
+    {
+        $this->requestParameters['Region'] = $region;
+        $this->queryParameters['Region'] = $region;
 
-	public function setPrivateKey($privateKey) {
-		$this->privateKey = $privateKey;
-		$this->queryParameters["PrivateKey"]=$privateKey;
-	}
-
-	public function getRegion() {
-		return $this->region;
-	}
-
-	public function setRegion($region) {
-		$this->region = $region;
-		$this->queryParameters["Region"]=$region;
-	}
-	
+        return $this;
+    }
 }

@@ -1,106 +1,142 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Cdn\Request\V20141111;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of SetReqAuthConfig
+ *
+ * @method string getKey1()
+ * @method string getKey2()
+ * @method string getAuthRemoteDesc()
+ * @method string getSecurityToken()
+ * @method string getDomainName()
+ * @method string getOwnerId()
+ * @method string getTimeOut()
+ * @method string getAuthType()
+ */
 class SetReqAuthConfigRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Cdn", "2014-11-11", "SetReqAuthConfig");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $securityToken;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Cdn',
+            '2014-11-11',
+            'SetReqAuthConfig'
+        );
+    }
 
-	private  $domainName;
+    /**
+     * @param string $key1
+     *
+     * @return $this
+     */
+    public function setKey1($key1)
+    {
+        $this->requestParameters['Key1'] = $key1;
+        $this->queryParameters['Key1'] = $key1;
 
-	private  $authType;
+        return $this;
+    }
 
-	private  $key1;
+    /**
+     * @param string $key2
+     *
+     * @return $this
+     */
+    public function setKey2($key2)
+    {
+        $this->requestParameters['Key2'] = $key2;
+        $this->queryParameters['Key2'] = $key2;
 
-	private  $key2;
+        return $this;
+    }
 
-	private  $timeOut;
+    /**
+     * @param string $authRemoteDesc
+     *
+     * @return $this
+     */
+    public function setAuthRemoteDesc($authRemoteDesc)
+    {
+        $this->requestParameters['AuthRemoteDesc'] = $authRemoteDesc;
+        $this->queryParameters['AuthRemoteDesc'] = $authRemoteDesc;
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+        return $this;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    /**
+     * @param string $securityToken
+     *
+     * @return $this
+     */
+    public function setSecurityToken($securityToken)
+    {
+        $this->requestParameters['SecurityToken'] = $securityToken;
+        $this->queryParameters['SecurityToken'] = $securityToken;
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+        return $this;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    /**
+     * @param string $domainName
+     *
+     * @return $this
+     */
+    public function setDomainName($domainName)
+    {
+        $this->requestParameters['DomainName'] = $domainName;
+        $this->queryParameters['DomainName'] = $domainName;
 
-	public function getDomainName() {
-		return $this->domainName;
-	}
+        return $this;
+    }
 
-	public function setDomainName($domainName) {
-		$this->domainName = $domainName;
-		$this->queryParameters["DomainName"]=$domainName;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function getAuthType() {
-		return $this->authType;
-	}
+        return $this;
+    }
 
-	public function setAuthType($authType) {
-		$this->authType = $authType;
-		$this->queryParameters["AuthType"]=$authType;
-	}
+    /**
+     * @param string $timeOut
+     *
+     * @return $this
+     */
+    public function setTimeOut($timeOut)
+    {
+        $this->requestParameters['TimeOut'] = $timeOut;
+        $this->queryParameters['TimeOut'] = $timeOut;
 
-	public function getKey1() {
-		return $this->key1;
-	}
+        return $this;
+    }
 
-	public function setKey1($key1) {
-		$this->key1 = $key1;
-		$this->queryParameters["Key1"]=$key1;
-	}
+    /**
+     * @param string $authType
+     *
+     * @return $this
+     */
+    public function setAuthType($authType)
+    {
+        $this->requestParameters['AuthType'] = $authType;
+        $this->queryParameters['AuthType'] = $authType;
 
-	public function getKey2() {
-		return $this->key2;
-	}
-
-	public function setKey2($key2) {
-		$this->key2 = $key2;
-		$this->queryParameters["Key2"]=$key2;
-	}
-
-	public function getTimeOut() {
-		return $this->timeOut;
-	}
-
-	public function setTimeOut($timeOut) {
-		$this->timeOut = $timeOut;
-		$this->queryParameters["TimeOut"]=$timeOut;
-	}
-	
+        return $this;
+    }
 }

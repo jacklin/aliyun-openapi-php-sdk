@@ -1,821 +1,790 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Ecs\Request\V20140526;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of CreateInstance
+ *
+ * @method string getResourceOwnerId()
+ * @method string getHpcClusterId()
+ * @method string getSecurityEnhancementStrategy()
+ * @method string getKeyPairName()
+ * @method string getSpotPriceLimit()
+ * @method string getDeletionProtection()
+ * @method string getResourceGroupId()
+ * @method string getHostName()
+ * @method string getPassword()
+ * @method array getTags()
+ * @method string getAutoRenewPeriod()
+ * @method string getNodeControllerId()
+ * @method string getPeriod()
+ * @method string getDryRun()
+ * @method string getOwnerId()
+ * @method string getCapacityReservationPreference()
+ * @method string getVSwitchId()
+ * @method string getPrivateIpAddress()
+ * @method string getSpotStrategy()
+ * @method string getPeriodUnit()
+ * @method string getInstanceName()
+ * @method string getAutoRenew()
+ * @method string getInternetChargeType()
+ * @method string getZoneId()
+ * @method string getInternetMaxBandwidthIn()
+ * @method string getUseAdditionalService()
+ * @method string getImageId()
+ * @method string getClientToken()
+ * @method string getVlanId()
+ * @method string getSpotInterruptionBehavior()
+ * @method string getIoOptimized()
+ * @method string getSecurityGroupId()
+ * @method string getInternetMaxBandwidthOut()
+ * @method string getDescription()
+ * @method string getSystemDiskCategory()
+ * @method string getCapacityReservationId()
+ * @method string getUserData()
+ * @method string getPasswordInherit()
+ * @method string getInstanceType()
+ * @method array getArns()
+ * @method string getInstanceChargeType()
+ * @method string getDeploymentSetId()
+ * @method string getInnerIpAddress()
+ * @method string getResourceOwnerAccount()
+ * @method string getOwnerAccount()
+ * @method string getSystemDiskDiskName()
+ * @method string getRamRoleName()
+ * @method string getDedicatedHostId()
+ * @method string getClusterId()
+ * @method string getCreditSpecification()
+ * @method array getDataDisks()
+ * @method string getSystemDiskSize()
+ * @method string getSystemDiskDescription()
+ */
 class CreateInstanceRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "CreateInstance");
-	}
 
-	private  $ownerId;
-
-	private  $resourceOwnerAccount;
-
-	private  $resourceOwnerId;
-
-	private  $imageId;
-
-	private  $instanceType;
-
-	private  $securityGroupId;
-
-	private  $instanceName;
-
-	private  $internetChargeType;
-
-	private  $autoRenew;
-
-	private  $autoRenewPeriod;
-
-	private  $internetMaxBandwidthIn;
-
-	private  $internetMaxBandwidthOut;
-
-	private  $hostName;
-
-	private  $password;
-
-	private  $zoneId;
-
-	private  $clusterId;
-
-	private  $clientToken;
-
-	private  $vlanId;
-
-	private  $innerIpAddress;
-
-	private  $systemDiskSize;
-
-	private  $systemDiskCategory;
-
-	private  $systemDiskDiskName;
-
-	private  $systemDiskDescription;
-
-	private  $dataDisk1Size;
-
-	private  $dataDisk1Category;
-
-	private  $dataDisk1SnapshotId;
-
-	private  $dataDisk1DiskName;
-
-	private  $dataDisk1Description;
-
-	private  $dataDisk1Device;
-
-	private  $dataDisk1DeleteWithInstance;
-
-	private  $dataDisk2Size;
-
-	private  $dataDisk2Category;
-
-	private  $dataDisk2SnapshotId;
-
-	private  $dataDisk2DiskName;
-
-	private  $dataDisk2Description;
-
-	private  $dataDisk2Device;
-
-	private  $dataDisk2DeleteWithInstance;
-
-	private  $dataDisk3Size;
-
-	private  $dataDisk3Category;
-
-	private  $dataDisk3SnapshotId;
-
-	private  $dataDisk3DiskName;
-
-	private  $dataDisk3Description;
-
-	private  $dataDisk3Device;
-
-	private  $dataDisk3DeleteWithInstance;
-
-	private  $dataDisk4Size;
-
-	private  $dataDisk4Category;
-
-	private  $dataDisk4SnapshotId;
-
-	private  $dataDisk4DiskName;
-
-	private  $dataDisk4Description;
-
-	private  $dataDisk4Device;
-
-	private  $dataDisk4DeleteWithInstance;
-
-	private  $nodeControllerId;
-
-	private  $description;
-
-	private  $vSwitchId;
-
-	private  $privateIpAddress;
-
-	private  $ioOptimized;
-
-	private  $ownerAccount;
-
-	private  $useAdditionalService;
-
-	private  $instanceChargeType;
-
-	private  $period;
-
-	private  $tag1Key;
-
-	private  $tag2Key;
-
-	private  $tag3Key;
-
-	private  $tag4Key;
-
-	private  $tag5Key;
-
-	private  $tag1Value;
-
-	private  $tag2Value;
-
-	private  $tag3Value;
-
-	private  $tag4Value;
-
-	private  $tag5Value;
-
-	private  $userData;
-
-	private  $spotStrategy;
-
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
-
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
-
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
-
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
-
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
-
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
-
-	public function getImageId() {
-		return $this->imageId;
-	}
-
-	public function setImageId($imageId) {
-		$this->imageId = $imageId;
-		$this->queryParameters["ImageId"]=$imageId;
-	}
-
-	public function getInstanceType() {
-		return $this->instanceType;
-	}
-
-	public function setInstanceType($instanceType) {
-		$this->instanceType = $instanceType;
-		$this->queryParameters["InstanceType"]=$instanceType;
-	}
-
-	public function getSecurityGroupId() {
-		return $this->securityGroupId;
-	}
-
-	public function setSecurityGroupId($securityGroupId) {
-		$this->securityGroupId = $securityGroupId;
-		$this->queryParameters["SecurityGroupId"]=$securityGroupId;
-	}
-
-	public function getInstanceName() {
-		return $this->instanceName;
-	}
-
-	public function setInstanceName($instanceName) {
-		$this->instanceName = $instanceName;
-		$this->queryParameters["InstanceName"]=$instanceName;
-	}
-
-	public function getInternetChargeType() {
-		return $this->internetChargeType;
-	}
-
-	public function setInternetChargeType($internetChargeType) {
-		$this->internetChargeType = $internetChargeType;
-		$this->queryParameters["InternetChargeType"]=$internetChargeType;
-	}
-
-	public function getAutoRenew() {
-		return $this->autoRenew;
-	}
-
-	public function setAutoRenew($autoRenew) {
-		$this->autoRenew = $autoRenew;
-		$this->queryParameters["AutoRenew"]=$autoRenew;
-	}
-
-	public function getAutoRenewPeriod() {
-		return $this->autoRenewPeriod;
-	}
-
-	public function setAutoRenewPeriod($autoRenewPeriod) {
-		$this->autoRenewPeriod = $autoRenewPeriod;
-		$this->queryParameters["AutoRenewPeriod"]=$autoRenewPeriod;
-	}
-
-	public function getInternetMaxBandwidthIn() {
-		return $this->internetMaxBandwidthIn;
-	}
-
-	public function setInternetMaxBandwidthIn($internetMaxBandwidthIn) {
-		$this->internetMaxBandwidthIn = $internetMaxBandwidthIn;
-		$this->queryParameters["InternetMaxBandwidthIn"]=$internetMaxBandwidthIn;
-	}
-
-	public function getInternetMaxBandwidthOut() {
-		return $this->internetMaxBandwidthOut;
-	}
-
-	public function setInternetMaxBandwidthOut($internetMaxBandwidthOut) {
-		$this->internetMaxBandwidthOut = $internetMaxBandwidthOut;
-		$this->queryParameters["InternetMaxBandwidthOut"]=$internetMaxBandwidthOut;
-	}
-
-	public function getHostName() {
-		return $this->hostName;
-	}
-
-	public function setHostName($hostName) {
-		$this->hostName = $hostName;
-		$this->queryParameters["HostName"]=$hostName;
-	}
-
-	public function getPassword() {
-		return $this->password;
-	}
-
-	public function setPassword($password) {
-		$this->password = $password;
-		$this->queryParameters["Password"]=$password;
-	}
-
-	public function getZoneId() {
-		return $this->zoneId;
-	}
-
-	public function setZoneId($zoneId) {
-		$this->zoneId = $zoneId;
-		$this->queryParameters["ZoneId"]=$zoneId;
-	}
-
-	public function getClusterId() {
-		return $this->clusterId;
-	}
-
-	public function setClusterId($clusterId) {
-		$this->clusterId = $clusterId;
-		$this->queryParameters["ClusterId"]=$clusterId;
-	}
-
-	public function getClientToken() {
-		return $this->clientToken;
-	}
-
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
-
-	public function getVlanId() {
-		return $this->vlanId;
-	}
-
-	public function setVlanId($vlanId) {
-		$this->vlanId = $vlanId;
-		$this->queryParameters["VlanId"]=$vlanId;
-	}
-
-	public function getInnerIpAddress() {
-		return $this->innerIpAddress;
-	}
-
-	public function setInnerIpAddress($innerIpAddress) {
-		$this->innerIpAddress = $innerIpAddress;
-		$this->queryParameters["InnerIpAddress"]=$innerIpAddress;
-	}
-
-	public function getSystemDiskSize() {
-		return $this->systemDiskSize;
-	}
-
-	public function setSystemDiskSize($systemDiskSize) {
-		$this->systemDiskSize = $systemDiskSize;
-		$this->queryParameters["SystemDisk.Size"]=$systemDiskSize;
-	}
-
-	public function getSystemDiskCategory() {
-		return $this->systemDiskCategory;
-	}
-
-	public function setSystemDiskCategory($systemDiskCategory) {
-		$this->systemDiskCategory = $systemDiskCategory;
-		$this->queryParameters["SystemDisk.Category"]=$systemDiskCategory;
-	}
-
-	public function getSystemDiskDiskName() {
-		return $this->systemDiskDiskName;
-	}
-
-	public function setSystemDiskDiskName($systemDiskDiskName) {
-		$this->systemDiskDiskName = $systemDiskDiskName;
-		$this->queryParameters["SystemDisk.DiskName"]=$systemDiskDiskName;
-	}
-
-	public function getSystemDiskDescription() {
-		return $this->systemDiskDescription;
-	}
-
-	public function setSystemDiskDescription($systemDiskDescription) {
-		$this->systemDiskDescription = $systemDiskDescription;
-		$this->queryParameters["SystemDisk.Description"]=$systemDiskDescription;
-	}
-
-	public function getDataDisk1Size() {
-		return $this->dataDisk1Size;
-	}
-
-	public function setDataDisk1Size($dataDisk1Size) {
-		$this->dataDisk1Size = $dataDisk1Size;
-		$this->queryParameters["DataDisk.1.Size"]=$dataDisk1Size;
-	}
-
-	public function getDataDisk1Category() {
-		return $this->dataDisk1Category;
-	}
-
-	public function setDataDisk1Category($dataDisk1Category) {
-		$this->dataDisk1Category = $dataDisk1Category;
-		$this->queryParameters["DataDisk.1.Category"]=$dataDisk1Category;
-	}
-
-	public function getDataDisk1SnapshotId() {
-		return $this->dataDisk1SnapshotId;
-	}
-
-	public function setDataDisk1SnapshotId($dataDisk1SnapshotId) {
-		$this->dataDisk1SnapshotId = $dataDisk1SnapshotId;
-		$this->queryParameters["DataDisk.1.SnapshotId"]=$dataDisk1SnapshotId;
-	}
-
-	public function getDataDisk1DiskName() {
-		return $this->dataDisk1DiskName;
-	}
-
-	public function setDataDisk1DiskName($dataDisk1DiskName) {
-		$this->dataDisk1DiskName = $dataDisk1DiskName;
-		$this->queryParameters["DataDisk.1.DiskName"]=$dataDisk1DiskName;
-	}
-
-	public function getDataDisk1Description() {
-		return $this->dataDisk1Description;
-	}
-
-	public function setDataDisk1Description($dataDisk1Description) {
-		$this->dataDisk1Description = $dataDisk1Description;
-		$this->queryParameters["DataDisk.1.Description"]=$dataDisk1Description;
-	}
-
-	public function getDataDisk1Device() {
-		return $this->dataDisk1Device;
-	}
-
-	public function setDataDisk1Device($dataDisk1Device) {
-		$this->dataDisk1Device = $dataDisk1Device;
-		$this->queryParameters["DataDisk.1.Device"]=$dataDisk1Device;
-	}
-
-	public function getDataDisk1DeleteWithInstance() {
-		return $this->dataDisk1DeleteWithInstance;
-	}
-
-	public function setDataDisk1DeleteWithInstance($dataDisk1DeleteWithInstance) {
-		$this->dataDisk1DeleteWithInstance = $dataDisk1DeleteWithInstance;
-		$this->queryParameters["DataDisk.1.DeleteWithInstance"]=$dataDisk1DeleteWithInstance;
-	}
-
-	public function getDataDisk2Size() {
-		return $this->dataDisk2Size;
-	}
-
-	public function setDataDisk2Size($dataDisk2Size) {
-		$this->dataDisk2Size = $dataDisk2Size;
-		$this->queryParameters["DataDisk.2.Size"]=$dataDisk2Size;
-	}
-
-	public function getDataDisk2Category() {
-		return $this->dataDisk2Category;
-	}
-
-	public function setDataDisk2Category($dataDisk2Category) {
-		$this->dataDisk2Category = $dataDisk2Category;
-		$this->queryParameters["DataDisk.2.Category"]=$dataDisk2Category;
-	}
-
-	public function getDataDisk2SnapshotId() {
-		return $this->dataDisk2SnapshotId;
-	}
-
-	public function setDataDisk2SnapshotId($dataDisk2SnapshotId) {
-		$this->dataDisk2SnapshotId = $dataDisk2SnapshotId;
-		$this->queryParameters["DataDisk.2.SnapshotId"]=$dataDisk2SnapshotId;
-	}
-
-	public function getDataDisk2DiskName() {
-		return $this->dataDisk2DiskName;
-	}
-
-	public function setDataDisk2DiskName($dataDisk2DiskName) {
-		$this->dataDisk2DiskName = $dataDisk2DiskName;
-		$this->queryParameters["DataDisk.2.DiskName"]=$dataDisk2DiskName;
-	}
-
-	public function getDataDisk2Description() {
-		return $this->dataDisk2Description;
-	}
-
-	public function setDataDisk2Description($dataDisk2Description) {
-		$this->dataDisk2Description = $dataDisk2Description;
-		$this->queryParameters["DataDisk.2.Description"]=$dataDisk2Description;
-	}
-
-	public function getDataDisk2Device() {
-		return $this->dataDisk2Device;
-	}
-
-	public function setDataDisk2Device($dataDisk2Device) {
-		$this->dataDisk2Device = $dataDisk2Device;
-		$this->queryParameters["DataDisk.2.Device"]=$dataDisk2Device;
-	}
-
-	public function getDataDisk2DeleteWithInstance() {
-		return $this->dataDisk2DeleteWithInstance;
-	}
-
-	public function setDataDisk2DeleteWithInstance($dataDisk2DeleteWithInstance) {
-		$this->dataDisk2DeleteWithInstance = $dataDisk2DeleteWithInstance;
-		$this->queryParameters["DataDisk.2.DeleteWithInstance"]=$dataDisk2DeleteWithInstance;
-	}
-
-	public function getDataDisk3Size() {
-		return $this->dataDisk3Size;
-	}
-
-	public function setDataDisk3Size($dataDisk3Size) {
-		$this->dataDisk3Size = $dataDisk3Size;
-		$this->queryParameters["DataDisk.3.Size"]=$dataDisk3Size;
-	}
-
-	public function getDataDisk3Category() {
-		return $this->dataDisk3Category;
-	}
-
-	public function setDataDisk3Category($dataDisk3Category) {
-		$this->dataDisk3Category = $dataDisk3Category;
-		$this->queryParameters["DataDisk.3.Category"]=$dataDisk3Category;
-	}
-
-	public function getDataDisk3SnapshotId() {
-		return $this->dataDisk3SnapshotId;
-	}
-
-	public function setDataDisk3SnapshotId($dataDisk3SnapshotId) {
-		$this->dataDisk3SnapshotId = $dataDisk3SnapshotId;
-		$this->queryParameters["DataDisk.3.SnapshotId"]=$dataDisk3SnapshotId;
-	}
-
-	public function getDataDisk3DiskName() {
-		return $this->dataDisk3DiskName;
-	}
-
-	public function setDataDisk3DiskName($dataDisk3DiskName) {
-		$this->dataDisk3DiskName = $dataDisk3DiskName;
-		$this->queryParameters["DataDisk.3.DiskName"]=$dataDisk3DiskName;
-	}
-
-	public function getDataDisk3Description() {
-		return $this->dataDisk3Description;
-	}
-
-	public function setDataDisk3Description($dataDisk3Description) {
-		$this->dataDisk3Description = $dataDisk3Description;
-		$this->queryParameters["DataDisk.3.Description"]=$dataDisk3Description;
-	}
-
-	public function getDataDisk3Device() {
-		return $this->dataDisk3Device;
-	}
-
-	public function setDataDisk3Device($dataDisk3Device) {
-		$this->dataDisk3Device = $dataDisk3Device;
-		$this->queryParameters["DataDisk.3.Device"]=$dataDisk3Device;
-	}
-
-	public function getDataDisk3DeleteWithInstance() {
-		return $this->dataDisk3DeleteWithInstance;
-	}
-
-	public function setDataDisk3DeleteWithInstance($dataDisk3DeleteWithInstance) {
-		$this->dataDisk3DeleteWithInstance = $dataDisk3DeleteWithInstance;
-		$this->queryParameters["DataDisk.3.DeleteWithInstance"]=$dataDisk3DeleteWithInstance;
-	}
-
-	public function getDataDisk4Size() {
-		return $this->dataDisk4Size;
-	}
-
-	public function setDataDisk4Size($dataDisk4Size) {
-		$this->dataDisk4Size = $dataDisk4Size;
-		$this->queryParameters["DataDisk.4.Size"]=$dataDisk4Size;
-	}
-
-	public function getDataDisk4Category() {
-		return $this->dataDisk4Category;
-	}
-
-	public function setDataDisk4Category($dataDisk4Category) {
-		$this->dataDisk4Category = $dataDisk4Category;
-		$this->queryParameters["DataDisk.4.Category"]=$dataDisk4Category;
-	}
-
-	public function getDataDisk4SnapshotId() {
-		return $this->dataDisk4SnapshotId;
-	}
-
-	public function setDataDisk4SnapshotId($dataDisk4SnapshotId) {
-		$this->dataDisk4SnapshotId = $dataDisk4SnapshotId;
-		$this->queryParameters["DataDisk.4.SnapshotId"]=$dataDisk4SnapshotId;
-	}
-
-	public function getDataDisk4DiskName() {
-		return $this->dataDisk4DiskName;
-	}
-
-	public function setDataDisk4DiskName($dataDisk4DiskName) {
-		$this->dataDisk4DiskName = $dataDisk4DiskName;
-		$this->queryParameters["DataDisk.4.DiskName"]=$dataDisk4DiskName;
-	}
-
-	public function getDataDisk4Description() {
-		return $this->dataDisk4Description;
-	}
-
-	public function setDataDisk4Description($dataDisk4Description) {
-		$this->dataDisk4Description = $dataDisk4Description;
-		$this->queryParameters["DataDisk.4.Description"]=$dataDisk4Description;
-	}
-
-	public function getDataDisk4Device() {
-		return $this->dataDisk4Device;
-	}
-
-	public function setDataDisk4Device($dataDisk4Device) {
-		$this->dataDisk4Device = $dataDisk4Device;
-		$this->queryParameters["DataDisk.4.Device"]=$dataDisk4Device;
-	}
-
-	public function getDataDisk4DeleteWithInstance() {
-		return $this->dataDisk4DeleteWithInstance;
-	}
-
-	public function setDataDisk4DeleteWithInstance($dataDisk4DeleteWithInstance) {
-		$this->dataDisk4DeleteWithInstance = $dataDisk4DeleteWithInstance;
-		$this->queryParameters["DataDisk.4.DeleteWithInstance"]=$dataDisk4DeleteWithInstance;
-	}
-
-	public function getNodeControllerId() {
-		return $this->nodeControllerId;
-	}
-
-	public function setNodeControllerId($nodeControllerId) {
-		$this->nodeControllerId = $nodeControllerId;
-		$this->queryParameters["NodeControllerId"]=$nodeControllerId;
-	}
-
-	public function getDescription() {
-		return $this->description;
-	}
-
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
-
-	public function getVSwitchId() {
-		return $this->vSwitchId;
-	}
-
-	public function setVSwitchId($vSwitchId) {
-		$this->vSwitchId = $vSwitchId;
-		$this->queryParameters["VSwitchId"]=$vSwitchId;
-	}
-
-	public function getPrivateIpAddress() {
-		return $this->privateIpAddress;
-	}
-
-	public function setPrivateIpAddress($privateIpAddress) {
-		$this->privateIpAddress = $privateIpAddress;
-		$this->queryParameters["PrivateIpAddress"]=$privateIpAddress;
-	}
-
-	public function getIoOptimized() {
-		return $this->ioOptimized;
-	}
-
-	public function setIoOptimized($ioOptimized) {
-		$this->ioOptimized = $ioOptimized;
-		$this->queryParameters["IoOptimized"]=$ioOptimized;
-	}
-
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
-
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
-
-	public function getUseAdditionalService() {
-		return $this->useAdditionalService;
-	}
-
-	public function setUseAdditionalService($useAdditionalService) {
-		$this->useAdditionalService = $useAdditionalService;
-		$this->queryParameters["UseAdditionalService"]=$useAdditionalService;
-	}
-
-	public function getInstanceChargeType() {
-		return $this->instanceChargeType;
-	}
-
-	public function setInstanceChargeType($instanceChargeType) {
-		$this->instanceChargeType = $instanceChargeType;
-		$this->queryParameters["InstanceChargeType"]=$instanceChargeType;
-	}
-
-	public function getPeriod() {
-		return $this->period;
-	}
-
-	public function setPeriod($period) {
-		$this->period = $period;
-		$this->queryParameters["Period"]=$period;
-	}
-
-	public function getTag1Key() {
-		return $this->tag1Key;
-	}
-
-	public function setTag1Key($tag1Key) {
-		$this->tag1Key = $tag1Key;
-		$this->queryParameters["Tag.1.Key"]=$tag1Key;
-	}
-
-	public function getTag2Key() {
-		return $this->tag2Key;
-	}
-
-	public function setTag2Key($tag2Key) {
-		$this->tag2Key = $tag2Key;
-		$this->queryParameters["Tag.2.Key"]=$tag2Key;
-	}
-
-	public function getTag3Key() {
-		return $this->tag3Key;
-	}
-
-	public function setTag3Key($tag3Key) {
-		$this->tag3Key = $tag3Key;
-		$this->queryParameters["Tag.3.Key"]=$tag3Key;
-	}
-
-	public function getTag4Key() {
-		return $this->tag4Key;
-	}
-
-	public function setTag4Key($tag4Key) {
-		$this->tag4Key = $tag4Key;
-		$this->queryParameters["Tag.4.Key"]=$tag4Key;
-	}
-
-	public function getTag5Key() {
-		return $this->tag5Key;
-	}
-
-	public function setTag5Key($tag5Key) {
-		$this->tag5Key = $tag5Key;
-		$this->queryParameters["Tag.5.Key"]=$tag5Key;
-	}
-
-	public function getTag1Value() {
-		return $this->tag1Value;
-	}
-
-	public function setTag1Value($tag1Value) {
-		$this->tag1Value = $tag1Value;
-		$this->queryParameters["Tag.1.Value"]=$tag1Value;
-	}
-
-	public function getTag2Value() {
-		return $this->tag2Value;
-	}
-
-	public function setTag2Value($tag2Value) {
-		$this->tag2Value = $tag2Value;
-		$this->queryParameters["Tag.2.Value"]=$tag2Value;
-	}
-
-	public function getTag3Value() {
-		return $this->tag3Value;
-	}
-
-	public function setTag3Value($tag3Value) {
-		$this->tag3Value = $tag3Value;
-		$this->queryParameters["Tag.3.Value"]=$tag3Value;
-	}
-
-	public function getTag4Value() {
-		return $this->tag4Value;
-	}
-
-	public function setTag4Value($tag4Value) {
-		$this->tag4Value = $tag4Value;
-		$this->queryParameters["Tag.4.Value"]=$tag4Value;
-	}
-
-	public function getTag5Value() {
-		return $this->tag5Value;
-	}
-
-	public function setTag5Value($tag5Value) {
-		$this->tag5Value = $tag5Value;
-		$this->queryParameters["Tag.5.Value"]=$tag5Value;
-	}
-
-	public function getUserData() {
-		return $this->userData;
-	}
-
-	public function setUserData($userData) {
-		$this->userData = $userData;
-		$this->queryParameters["UserData"]=$userData;
-	}
-
-	public function getSpotStrategy() {
-		return $this->spotStrategy;
-	}
-
-	public function setSpotStrategy($spotStrategy) {
-		$this->spotStrategy = $spotStrategy;
-		$this->queryParameters["SpotStrategy"]=$spotStrategy;
-	}
-	
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
+
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Ecs',
+            '2014-05-26',
+            'CreateInstance',
+            'ecs'
+        );
+    }
+
+    /**
+     * @param string $resourceOwnerId
+     *
+     * @return $this
+     */
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->requestParameters['ResourceOwnerId'] = $resourceOwnerId;
+        $this->queryParameters['ResourceOwnerId'] = $resourceOwnerId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $hpcClusterId
+     *
+     * @return $this
+     */
+    public function setHpcClusterId($hpcClusterId)
+    {
+        $this->requestParameters['HpcClusterId'] = $hpcClusterId;
+        $this->queryParameters['HpcClusterId'] = $hpcClusterId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $securityEnhancementStrategy
+     *
+     * @return $this
+     */
+    public function setSecurityEnhancementStrategy($securityEnhancementStrategy)
+    {
+        $this->requestParameters['SecurityEnhancementStrategy'] = $securityEnhancementStrategy;
+        $this->queryParameters['SecurityEnhancementStrategy'] = $securityEnhancementStrategy;
+
+        return $this;
+    }
+
+    /**
+     * @param string $keyPairName
+     *
+     * @return $this
+     */
+    public function setKeyPairName($keyPairName)
+    {
+        $this->requestParameters['KeyPairName'] = $keyPairName;
+        $this->queryParameters['KeyPairName'] = $keyPairName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $spotPriceLimit
+     *
+     * @return $this
+     */
+    public function setSpotPriceLimit($spotPriceLimit)
+    {
+        $this->requestParameters['SpotPriceLimit'] = $spotPriceLimit;
+        $this->queryParameters['SpotPriceLimit'] = $spotPriceLimit;
+
+        return $this;
+    }
+
+    /**
+     * @param string $deletionProtection
+     *
+     * @return $this
+     */
+    public function setDeletionProtection($deletionProtection)
+    {
+        $this->requestParameters['DeletionProtection'] = $deletionProtection;
+        $this->queryParameters['DeletionProtection'] = $deletionProtection;
+
+        return $this;
+    }
+
+    /**
+     * @param string $resourceGroupId
+     *
+     * @return $this
+     */
+    public function setResourceGroupId($resourceGroupId)
+    {
+        $this->requestParameters['ResourceGroupId'] = $resourceGroupId;
+        $this->queryParameters['ResourceGroupId'] = $resourceGroupId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $hostName
+     *
+     * @return $this
+     */
+    public function setHostName($hostName)
+    {
+        $this->requestParameters['HostName'] = $hostName;
+        $this->queryParameters['HostName'] = $hostName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $password
+     *
+     * @return $this
+     */
+    public function setPassword($password)
+    {
+        $this->requestParameters['Password'] = $password;
+        $this->queryParameters['Password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function setTags(array $tag)
+    {
+        $this->requestParameters['Tags'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->queryParameters['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->queryParameters['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $autoRenewPeriod
+     *
+     * @return $this
+     */
+    public function setAutoRenewPeriod($autoRenewPeriod)
+    {
+        $this->requestParameters['AutoRenewPeriod'] = $autoRenewPeriod;
+        $this->queryParameters['AutoRenewPeriod'] = $autoRenewPeriod;
+
+        return $this;
+    }
+
+    /**
+     * @param string $nodeControllerId
+     *
+     * @return $this
+     */
+    public function setNodeControllerId($nodeControllerId)
+    {
+        $this->requestParameters['NodeControllerId'] = $nodeControllerId;
+        $this->queryParameters['NodeControllerId'] = $nodeControllerId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $period
+     *
+     * @return $this
+     */
+    public function setPeriod($period)
+    {
+        $this->requestParameters['Period'] = $period;
+        $this->queryParameters['Period'] = $period;
+
+        return $this;
+    }
+
+    /**
+     * @param string $dryRun
+     *
+     * @return $this
+     */
+    public function setDryRun($dryRun)
+    {
+        $this->requestParameters['DryRun'] = $dryRun;
+        $this->queryParameters['DryRun'] = $dryRun;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $capacityReservationPreference
+     *
+     * @return $this
+     */
+    public function setCapacityReservationPreference($capacityReservationPreference)
+    {
+        $this->requestParameters['CapacityReservationPreference'] = $capacityReservationPreference;
+        $this->queryParameters['CapacityReservationPreference'] = $capacityReservationPreference;
+
+        return $this;
+    }
+
+    /**
+     * @param string $vSwitchId
+     *
+     * @return $this
+     */
+    public function setVSwitchId($vSwitchId)
+    {
+        $this->requestParameters['VSwitchId'] = $vSwitchId;
+        $this->queryParameters['VSwitchId'] = $vSwitchId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $privateIpAddress
+     *
+     * @return $this
+     */
+    public function setPrivateIpAddress($privateIpAddress)
+    {
+        $this->requestParameters['PrivateIpAddress'] = $privateIpAddress;
+        $this->queryParameters['PrivateIpAddress'] = $privateIpAddress;
+
+        return $this;
+    }
+
+    /**
+     * @param string $spotStrategy
+     *
+     * @return $this
+     */
+    public function setSpotStrategy($spotStrategy)
+    {
+        $this->requestParameters['SpotStrategy'] = $spotStrategy;
+        $this->queryParameters['SpotStrategy'] = $spotStrategy;
+
+        return $this;
+    }
+
+    /**
+     * @param string $periodUnit
+     *
+     * @return $this
+     */
+    public function setPeriodUnit($periodUnit)
+    {
+        $this->requestParameters['PeriodUnit'] = $periodUnit;
+        $this->queryParameters['PeriodUnit'] = $periodUnit;
+
+        return $this;
+    }
+
+    /**
+     * @param string $instanceName
+     *
+     * @return $this
+     */
+    public function setInstanceName($instanceName)
+    {
+        $this->requestParameters['InstanceName'] = $instanceName;
+        $this->queryParameters['InstanceName'] = $instanceName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $autoRenew
+     *
+     * @return $this
+     */
+    public function setAutoRenew($autoRenew)
+    {
+        $this->requestParameters['AutoRenew'] = $autoRenew;
+        $this->queryParameters['AutoRenew'] = $autoRenew;
+
+        return $this;
+    }
+
+    /**
+     * @param string $internetChargeType
+     *
+     * @return $this
+     */
+    public function setInternetChargeType($internetChargeType)
+    {
+        $this->requestParameters['InternetChargeType'] = $internetChargeType;
+        $this->queryParameters['InternetChargeType'] = $internetChargeType;
+
+        return $this;
+    }
+
+    /**
+     * @param string $zoneId
+     *
+     * @return $this
+     */
+    public function setZoneId($zoneId)
+    {
+        $this->requestParameters['ZoneId'] = $zoneId;
+        $this->queryParameters['ZoneId'] = $zoneId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $internetMaxBandwidthIn
+     *
+     * @return $this
+     */
+    public function setInternetMaxBandwidthIn($internetMaxBandwidthIn)
+    {
+        $this->requestParameters['InternetMaxBandwidthIn'] = $internetMaxBandwidthIn;
+        $this->queryParameters['InternetMaxBandwidthIn'] = $internetMaxBandwidthIn;
+
+        return $this;
+    }
+
+    /**
+     * @param string $useAdditionalService
+     *
+     * @return $this
+     */
+    public function setUseAdditionalService($useAdditionalService)
+    {
+        $this->requestParameters['UseAdditionalService'] = $useAdditionalService;
+        $this->queryParameters['UseAdditionalService'] = $useAdditionalService;
+
+        return $this;
+    }
+
+    /**
+     * @param string $imageId
+     *
+     * @return $this
+     */
+    public function setImageId($imageId)
+    {
+        $this->requestParameters['ImageId'] = $imageId;
+        $this->queryParameters['ImageId'] = $imageId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $clientToken
+     *
+     * @return $this
+     */
+    public function setClientToken($clientToken)
+    {
+        $this->requestParameters['ClientToken'] = $clientToken;
+        $this->queryParameters['ClientToken'] = $clientToken;
+
+        return $this;
+    }
+
+    /**
+     * @param string $vlanId
+     *
+     * @return $this
+     */
+    public function setVlanId($vlanId)
+    {
+        $this->requestParameters['VlanId'] = $vlanId;
+        $this->queryParameters['VlanId'] = $vlanId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $spotInterruptionBehavior
+     *
+     * @return $this
+     */
+    public function setSpotInterruptionBehavior($spotInterruptionBehavior)
+    {
+        $this->requestParameters['SpotInterruptionBehavior'] = $spotInterruptionBehavior;
+        $this->queryParameters['SpotInterruptionBehavior'] = $spotInterruptionBehavior;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ioOptimized
+     *
+     * @return $this
+     */
+    public function setIoOptimized($ioOptimized)
+    {
+        $this->requestParameters['IoOptimized'] = $ioOptimized;
+        $this->queryParameters['IoOptimized'] = $ioOptimized;
+
+        return $this;
+    }
+
+    /**
+     * @param string $securityGroupId
+     *
+     * @return $this
+     */
+    public function setSecurityGroupId($securityGroupId)
+    {
+        $this->requestParameters['SecurityGroupId'] = $securityGroupId;
+        $this->queryParameters['SecurityGroupId'] = $securityGroupId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $internetMaxBandwidthOut
+     *
+     * @return $this
+     */
+    public function setInternetMaxBandwidthOut($internetMaxBandwidthOut)
+    {
+        $this->requestParameters['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
+        $this->queryParameters['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
+
+        return $this;
+    }
+
+    /**
+     * @param string $description
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->requestParameters['Description'] = $description;
+        $this->queryParameters['Description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * @param string $systemDiskCategory
+     *
+     * @return $this
+     */
+    public function setSystemDiskCategory($systemDiskCategory)
+    {
+        $this->requestParameters['SystemDiskCategory'] = $systemDiskCategory;
+        $this->queryParameters['SystemDisk.Category'] = $systemDiskCategory;
+
+        return $this;
+    }
+
+    /**
+     * @param string $capacityReservationId
+     *
+     * @return $this
+     */
+    public function setCapacityReservationId($capacityReservationId)
+    {
+        $this->requestParameters['CapacityReservationId'] = $capacityReservationId;
+        $this->queryParameters['CapacityReservationId'] = $capacityReservationId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $userData
+     *
+     * @return $this
+     */
+    public function setUserData($userData)
+    {
+        $this->requestParameters['UserData'] = $userData;
+        $this->queryParameters['UserData'] = $userData;
+
+        return $this;
+    }
+
+    /**
+     * @param string $passwordInherit
+     *
+     * @return $this
+     */
+    public function setPasswordInherit($passwordInherit)
+    {
+        $this->requestParameters['PasswordInherit'] = $passwordInherit;
+        $this->queryParameters['PasswordInherit'] = $passwordInherit;
+
+        return $this;
+    }
+
+    /**
+     * @param string $instanceType
+     *
+     * @return $this
+     */
+    public function setInstanceType($instanceType)
+    {
+        $this->requestParameters['InstanceType'] = $instanceType;
+        $this->queryParameters['InstanceType'] = $instanceType;
+
+        return $this;
+    }
+
+    /**
+     * @param array $arn
+     *
+     * @return $this
+     */
+    public function setArns(array $arn)
+    {
+        $this->requestParameters['Arns'] = $arn;
+        foreach ($arn as $depth1 => $depth1Value) {
+            $this->queryParameters['Arn.' . ($depth1 + 1) . '.Rolearn'] = $depth1Value['Rolearn'];
+            $this->queryParameters['Arn.' . ($depth1 + 1) . '.RoleType'] = $depth1Value['RoleType'];
+            $this->queryParameters['Arn.' . ($depth1 + 1) . '.AssumeRoleFor'] = $depth1Value['AssumeRoleFor'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $instanceChargeType
+     *
+     * @return $this
+     */
+    public function setInstanceChargeType($instanceChargeType)
+    {
+        $this->requestParameters['InstanceChargeType'] = $instanceChargeType;
+        $this->queryParameters['InstanceChargeType'] = $instanceChargeType;
+
+        return $this;
+    }
+
+    /**
+     * @param string $deploymentSetId
+     *
+     * @return $this
+     */
+    public function setDeploymentSetId($deploymentSetId)
+    {
+        $this->requestParameters['DeploymentSetId'] = $deploymentSetId;
+        $this->queryParameters['DeploymentSetId'] = $deploymentSetId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $innerIpAddress
+     *
+     * @return $this
+     */
+    public function setInnerIpAddress($innerIpAddress)
+    {
+        $this->requestParameters['InnerIpAddress'] = $innerIpAddress;
+        $this->queryParameters['InnerIpAddress'] = $innerIpAddress;
+
+        return $this;
+    }
+
+    /**
+     * @param string $resourceOwnerAccount
+     *
+     * @return $this
+     */
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->requestParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->queryParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ownerAccount
+     *
+     * @return $this
+     */
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->requestParameters['OwnerAccount'] = $ownerAccount;
+        $this->queryParameters['OwnerAccount'] = $ownerAccount;
+
+        return $this;
+    }
+
+    /**
+     * @param string $systemDiskDiskName
+     *
+     * @return $this
+     */
+    public function setSystemDiskDiskName($systemDiskDiskName)
+    {
+        $this->requestParameters['SystemDiskDiskName'] = $systemDiskDiskName;
+        $this->queryParameters['SystemDisk.DiskName'] = $systemDiskDiskName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ramRoleName
+     *
+     * @return $this
+     */
+    public function setRamRoleName($ramRoleName)
+    {
+        $this->requestParameters['RamRoleName'] = $ramRoleName;
+        $this->queryParameters['RamRoleName'] = $ramRoleName;
+
+        return $this;
+    }
+
+    /**
+     * @param string $dedicatedHostId
+     *
+     * @return $this
+     */
+    public function setDedicatedHostId($dedicatedHostId)
+    {
+        $this->requestParameters['DedicatedHostId'] = $dedicatedHostId;
+        $this->queryParameters['DedicatedHostId'] = $dedicatedHostId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $clusterId
+     *
+     * @return $this
+     */
+    public function setClusterId($clusterId)
+    {
+        $this->requestParameters['ClusterId'] = $clusterId;
+        $this->queryParameters['ClusterId'] = $clusterId;
+
+        return $this;
+    }
+
+    /**
+     * @param string $creditSpecification
+     *
+     * @return $this
+     */
+    public function setCreditSpecification($creditSpecification)
+    {
+        $this->requestParameters['CreditSpecification'] = $creditSpecification;
+        $this->queryParameters['CreditSpecification'] = $creditSpecification;
+
+        return $this;
+    }
+
+    /**
+     * @param array $dataDisk
+     *
+     * @return $this
+     */
+    public function setDataDisks(array $dataDisk)
+    {
+        $this->requestParameters['DataDisks'] = $dataDisk;
+        foreach ($dataDisk as $depth1 => $depth1Value) {
+            $this->queryParameters['DataDisk.' . ($depth1 + 1) . '.DiskName'] = $depth1Value['DiskName'];
+            $this->queryParameters['DataDisk.' . ($depth1 + 1) . '.SnapshotId'] = $depth1Value['SnapshotId'];
+            $this->queryParameters['DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
+            $this->queryParameters['DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
+            $this->queryParameters['DataDisk.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
+            $this->queryParameters['DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
+            $this->queryParameters['DataDisk.' . ($depth1 + 1) . '.KMSKeyId'] = $depth1Value['KMSKeyId'];
+            $this->queryParameters['DataDisk.' . ($depth1 + 1) . '.Device'] = $depth1Value['Device'];
+            $this->queryParameters['DataDisk.' . ($depth1 + 1) . '.DeleteWithInstance'] = $depth1Value['DeleteWithInstance'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $systemDiskSize
+     *
+     * @return $this
+     */
+    public function setSystemDiskSize($systemDiskSize)
+    {
+        $this->requestParameters['SystemDiskSize'] = $systemDiskSize;
+        $this->queryParameters['SystemDisk.Size'] = $systemDiskSize;
+
+        return $this;
+    }
+
+    /**
+     * @param string $systemDiskDescription
+     *
+     * @return $this
+     */
+    public function setSystemDiskDescription($systemDiskDescription)
+    {
+        $this->requestParameters['SystemDiskDescription'] = $systemDiskDescription;
+        $this->queryParameters['SystemDisk.Description'] = $systemDiskDescription;
+
+        return $this;
+    }
 }
