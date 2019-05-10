@@ -8,7 +8,7 @@
 
 - to run unit tests, you will have to configure aliyun-sdk.properties files in your user directory, and make sure your project has corresponding service enabled, eg. openmr.
 
-## Example
+## Example 原生用法如下
 
 ```php
 use Tool\AliyunSdk;
@@ -63,6 +63,43 @@ AliyunSdk 的使用类
 注：方法参数值区分大小写
 
 返回值：为请求类对象，使用方法如上【Example】(## Example)
+
+## Example Alibaba Cloud Client用法如下:
+```php
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+
+AlibabaCloud::accessKeyClient('accessKeyId', 'accessKeySecret')->asDefaultClient();
+
+try {
+    $result = AlibabaCloud::roa()
+                          ->regionId('cn-hangzhou') // Specify the requested regionId, if not specified, use the client regionId, then default regionId
+                          ->product('CS') // Specify product
+                          ->version('2015-12-15') // Specify product version
+                          ->action('DescribeClusterServices') // Specify product interface
+                          ->serviceCode('cs') // Set ServiceCode for addressing, optional
+                          ->endpointType('openAPI') // Set type, optional
+                          ->method('GET') // Set request method
+                          ->host('cs.aliyun.com') // Location Service will not be enabled if the host is specified. For example, service with a Certification type-Bearer Token should be specified
+                          ->pathPattern('/clusters/[ClusterId]/services') // Specify path rule with ROA-style
+                          ->withClusterId('123456') // Assign values to parameters in the path. Method: with + Parameter
+                          ->request(); // Make a request and return to result object. The request is to be placed at the end of the setting
+                          
+    print_r($result->toArray());
+    
+} catch (ClientException $exception) {
+    print_r($exception->getErrorMessage());
+} catch (ServerException $exception) {
+    print_r($exception->getErrorMessage());
+}
+```
+## explain
+
+Alibaba Cloud Client 用法请参见：
+
+https://github.com/aliyun/openapi-sdk-php-client#alibaba-cloud-client-for-php
+
 
 ## Authors && Contributors
 
