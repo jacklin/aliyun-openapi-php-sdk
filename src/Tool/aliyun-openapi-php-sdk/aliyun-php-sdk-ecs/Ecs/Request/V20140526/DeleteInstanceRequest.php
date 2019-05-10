@@ -1,95 +1,129 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Ecs\Request\V20140526;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of DeleteInstance
+ *
+ * @method string getResourceOwnerId()
+ * @method string getInstanceId()
+ * @method string getResourceOwnerAccount()
+ * @method string getOwnerAccount()
+ * @method string getTerminateSubscription()
+ * @method string getForce()
+ * @method string getOwnerId()
+ */
 class DeleteInstanceRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "DeleteInstance");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $resourceOwnerAccount;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Ecs',
+            '2014-05-26',
+            'DeleteInstance',
+            'ecs'
+        );
+    }
 
-	private  $resourceOwnerId;
+    /**
+     * @param string $resourceOwnerId
+     *
+     * @return $this
+     */
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->requestParameters['ResourceOwnerId'] = $resourceOwnerId;
+        $this->queryParameters['ResourceOwnerId'] = $resourceOwnerId;
 
-	private  $instanceId;
+        return $this;
+    }
 
-	private  $ownerAccount;
+    /**
+     * @param string $instanceId
+     *
+     * @return $this
+     */
+    public function setInstanceId($instanceId)
+    {
+        $this->requestParameters['InstanceId'] = $instanceId;
+        $this->queryParameters['InstanceId'] = $instanceId;
 
-	private  $force;
+        return $this;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    /**
+     * @param string $resourceOwnerAccount
+     *
+     * @return $this
+     */
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->requestParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->queryParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+        return $this;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    /**
+     * @param string $ownerAccount
+     *
+     * @return $this
+     */
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->requestParameters['OwnerAccount'] = $ownerAccount;
+        $this->queryParameters['OwnerAccount'] = $ownerAccount;
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+        return $this;
+    }
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    /**
+     * @param string $terminateSubscription
+     *
+     * @return $this
+     */
+    public function setTerminateSubscription($terminateSubscription)
+    {
+        $this->requestParameters['TerminateSubscription'] = $terminateSubscription;
+        $this->queryParameters['TerminateSubscription'] = $terminateSubscription;
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+        return $this;
+    }
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    /**
+     * @param string $force
+     *
+     * @return $this
+     */
+    public function setForce($force)
+    {
+        $this->requestParameters['Force'] = $force;
+        $this->queryParameters['Force'] = $force;
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+        return $this;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
-
-	public function getForce() {
-		return $this->force;
-	}
-
-	public function setForce($force) {
-		$this->force = $force;
-		$this->queryParameters["Force"]=$force;
-	}
-	
+        return $this;
+    }
 }

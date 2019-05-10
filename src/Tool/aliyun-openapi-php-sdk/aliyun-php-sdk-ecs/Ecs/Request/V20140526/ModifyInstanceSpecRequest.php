@@ -1,161 +1,241 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Ecs\Request\V20140526;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of ModifyInstanceSpec
+ *
+ * @method string getResourceOwnerId()
+ * @method string getResourceOwnerAccount()
+ * @method string getClientToken()
+ * @method string getAllowMigrateAcrossZone()
+ * @method string getOwnerAccount()
+ * @method string getInternetMaxBandwidthOut()
+ * @method string getOwnerId()
+ * @method string getTemporaryInternetMaxBandwidthOut()
+ * @method string getSystemDiskCategory()
+ * @method string getTemporaryStartTime()
+ * @method string getAsync()
+ * @method string getInstanceId()
+ * @method string getInstanceType()
+ * @method string getTemporaryEndTime()
+ * @method string getInternetMaxBandwidthIn()
+ */
 class ModifyInstanceSpecRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyInstanceSpec");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $resourceOwnerAccount;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Ecs',
+            '2014-05-26',
+            'ModifyInstanceSpec',
+            'ecs'
+        );
+    }
 
-	private  $resourceOwnerId;
+    /**
+     * @param string $resourceOwnerId
+     *
+     * @return $this
+     */
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->requestParameters['ResourceOwnerId'] = $resourceOwnerId;
+        $this->queryParameters['ResourceOwnerId'] = $resourceOwnerId;
 
-	private  $instanceId;
+        return $this;
+    }
 
-	private  $instanceType;
+    /**
+     * @param string $resourceOwnerAccount
+     *
+     * @return $this
+     */
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->requestParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->queryParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
-	private  $internetMaxBandwidthOut;
+        return $this;
+    }
 
-	private  $internetMaxBandwidthIn;
+    /**
+     * @param string $clientToken
+     *
+     * @return $this
+     */
+    public function setClientToken($clientToken)
+    {
+        $this->requestParameters['ClientToken'] = $clientToken;
+        $this->queryParameters['ClientToken'] = $clientToken;
 
-	private  $ownerAccount;
+        return $this;
+    }
 
-	private  $temporaryStartTime;
+    /**
+     * @param string $allowMigrateAcrossZone
+     *
+     * @return $this
+     */
+    public function setAllowMigrateAcrossZone($allowMigrateAcrossZone)
+    {
+        $this->requestParameters['AllowMigrateAcrossZone'] = $allowMigrateAcrossZone;
+        $this->queryParameters['AllowMigrateAcrossZone'] = $allowMigrateAcrossZone;
 
-	private  $temporaryEndTime;
+        return $this;
+    }
 
-	private  $temporaryInternetMaxBandwidthOut;
+    /**
+     * @param string $ownerAccount
+     *
+     * @return $this
+     */
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->requestParameters['OwnerAccount'] = $ownerAccount;
+        $this->queryParameters['OwnerAccount'] = $ownerAccount;
 
-	private  $async;
+        return $this;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    /**
+     * @param string $internetMaxBandwidthOut
+     *
+     * @return $this
+     */
+    public function setInternetMaxBandwidthOut($internetMaxBandwidthOut)
+    {
+        $this->requestParameters['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
+        $this->queryParameters['InternetMaxBandwidthOut'] = $internetMaxBandwidthOut;
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+        return $this;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+        return $this;
+    }
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    /**
+     * @param string $temporaryInternetMaxBandwidthOut
+     *
+     * @return $this
+     */
+    public function setTemporaryInternetMaxBandwidthOut($temporaryInternetMaxBandwidthOut)
+    {
+        $this->requestParameters['TemporaryInternetMaxBandwidthOut'] = $temporaryInternetMaxBandwidthOut;
+        $this->queryParameters['Temporary.InternetMaxBandwidthOut'] = $temporaryInternetMaxBandwidthOut;
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+        return $this;
+    }
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    /**
+     * @param string $systemDiskCategory
+     *
+     * @return $this
+     */
+    public function setSystemDiskCategory($systemDiskCategory)
+    {
+        $this->requestParameters['SystemDiskCategory'] = $systemDiskCategory;
+        $this->queryParameters['SystemDisk.Category'] = $systemDiskCategory;
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+        return $this;
+    }
 
-	public function getInstanceType() {
-		return $this->instanceType;
-	}
+    /**
+     * @param string $temporaryStartTime
+     *
+     * @return $this
+     */
+    public function setTemporaryStartTime($temporaryStartTime)
+    {
+        $this->requestParameters['TemporaryStartTime'] = $temporaryStartTime;
+        $this->queryParameters['Temporary.StartTime'] = $temporaryStartTime;
 
-	public function setInstanceType($instanceType) {
-		$this->instanceType = $instanceType;
-		$this->queryParameters["InstanceType"]=$instanceType;
-	}
+        return $this;
+    }
 
-	public function getInternetMaxBandwidthOut() {
-		return $this->internetMaxBandwidthOut;
-	}
+    /**
+     * @param string $async
+     *
+     * @return $this
+     */
+    public function setAsync($async)
+    {
+        $this->requestParameters['Async'] = $async;
+        $this->queryParameters['Async'] = $async;
 
-	public function setInternetMaxBandwidthOut($internetMaxBandwidthOut) {
-		$this->internetMaxBandwidthOut = $internetMaxBandwidthOut;
-		$this->queryParameters["InternetMaxBandwidthOut"]=$internetMaxBandwidthOut;
-	}
+        return $this;
+    }
 
-	public function getInternetMaxBandwidthIn() {
-		return $this->internetMaxBandwidthIn;
-	}
+    /**
+     * @param string $instanceId
+     *
+     * @return $this
+     */
+    public function setInstanceId($instanceId)
+    {
+        $this->requestParameters['InstanceId'] = $instanceId;
+        $this->queryParameters['InstanceId'] = $instanceId;
 
-	public function setInternetMaxBandwidthIn($internetMaxBandwidthIn) {
-		$this->internetMaxBandwidthIn = $internetMaxBandwidthIn;
-		$this->queryParameters["InternetMaxBandwidthIn"]=$internetMaxBandwidthIn;
-	}
+        return $this;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    /**
+     * @param string $instanceType
+     *
+     * @return $this
+     */
+    public function setInstanceType($instanceType)
+    {
+        $this->requestParameters['InstanceType'] = $instanceType;
+        $this->queryParameters['InstanceType'] = $instanceType;
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+        return $this;
+    }
 
-	public function getTemporaryStartTime() {
-		return $this->temporaryStartTime;
-	}
+    /**
+     * @param string $temporaryEndTime
+     *
+     * @return $this
+     */
+    public function setTemporaryEndTime($temporaryEndTime)
+    {
+        $this->requestParameters['TemporaryEndTime'] = $temporaryEndTime;
+        $this->queryParameters['Temporary.EndTime'] = $temporaryEndTime;
 
-	public function setTemporaryStartTime($temporaryStartTime) {
-		$this->temporaryStartTime = $temporaryStartTime;
-		$this->queryParameters["Temporary.StartTime"]=$temporaryStartTime;
-	}
+        return $this;
+    }
 
-	public function getTemporaryEndTime() {
-		return $this->temporaryEndTime;
-	}
+    /**
+     * @param string $internetMaxBandwidthIn
+     *
+     * @return $this
+     */
+    public function setInternetMaxBandwidthIn($internetMaxBandwidthIn)
+    {
+        $this->requestParameters['InternetMaxBandwidthIn'] = $internetMaxBandwidthIn;
+        $this->queryParameters['InternetMaxBandwidthIn'] = $internetMaxBandwidthIn;
 
-	public function setTemporaryEndTime($temporaryEndTime) {
-		$this->temporaryEndTime = $temporaryEndTime;
-		$this->queryParameters["Temporary.EndTime"]=$temporaryEndTime;
-	}
-
-	public function getTemporaryInternetMaxBandwidthOut() {
-		return $this->temporaryInternetMaxBandwidthOut;
-	}
-
-	public function setTemporaryInternetMaxBandwidthOut($temporaryInternetMaxBandwidthOut) {
-		$this->temporaryInternetMaxBandwidthOut = $temporaryInternetMaxBandwidthOut;
-		$this->queryParameters["Temporary.InternetMaxBandwidthOut"]=$temporaryInternetMaxBandwidthOut;
-	}
-
-	public function getAsync() {
-		return $this->async;
-	}
-
-	public function setAsync($async) {
-		$this->async = $async;
-		$this->queryParameters["Async"]=$async;
-	}
-	
+        return $this;
+    }
 }

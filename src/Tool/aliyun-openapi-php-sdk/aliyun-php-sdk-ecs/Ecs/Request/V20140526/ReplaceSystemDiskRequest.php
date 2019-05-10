@@ -1,139 +1,255 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Ecs\Request\V20140526;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of ReplaceSystemDisk
+ *
+ * @method string getResourceOwnerId()
+ * @method string getImageId()
+ * @method string getResourceOwnerAccount()
+ * @method string getClientToken()
+ * @method string getOwnerAccount()
+ * @method string getSecurityEnhancementStrategy()
+ * @method string getKeyPairName()
+ * @method string getOwnerId()
+ * @method string getPlatform()
+ * @method string getPassword()
+ * @method string getInstanceId()
+ * @method string getPasswordInherit()
+ * @method string getSystemDiskSize()
+ * @method string getDiskId()
+ * @method string getUseAdditionalService()
+ * @method string getArchitecture()
+ */
 class ReplaceSystemDiskRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "ReplaceSystemDisk");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $resourceOwnerAccount;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Ecs',
+            '2014-05-26',
+            'ReplaceSystemDisk',
+            'ecs'
+        );
+    }
 
-	private  $resourceOwnerId;
+    /**
+     * @param string $resourceOwnerId
+     *
+     * @return $this
+     */
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->requestParameters['ResourceOwnerId'] = $resourceOwnerId;
+        $this->queryParameters['ResourceOwnerId'] = $resourceOwnerId;
 
-	private  $instanceId;
+        return $this;
+    }
 
-	private  $imageId;
+    /**
+     * @param string $imageId
+     *
+     * @return $this
+     */
+    public function setImageId($imageId)
+    {
+        $this->requestParameters['ImageId'] = $imageId;
+        $this->queryParameters['ImageId'] = $imageId;
 
-	private  $systemDiskSize;
+        return $this;
+    }
 
-	private  $clientToken;
+    /**
+     * @param string $resourceOwnerAccount
+     *
+     * @return $this
+     */
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->requestParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->queryParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
-	private  $ownerAccount;
+        return $this;
+    }
 
-	private  $useAdditionalService;
+    /**
+     * @param string $clientToken
+     *
+     * @return $this
+     */
+    public function setClientToken($clientToken)
+    {
+        $this->requestParameters['ClientToken'] = $clientToken;
+        $this->queryParameters['ClientToken'] = $clientToken;
 
-	private  $password;
+        return $this;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    /**
+     * @param string $ownerAccount
+     *
+     * @return $this
+     */
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->requestParameters['OwnerAccount'] = $ownerAccount;
+        $this->queryParameters['OwnerAccount'] = $ownerAccount;
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+        return $this;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    /**
+     * @param string $securityEnhancementStrategy
+     *
+     * @return $this
+     */
+    public function setSecurityEnhancementStrategy($securityEnhancementStrategy)
+    {
+        $this->requestParameters['SecurityEnhancementStrategy'] = $securityEnhancementStrategy;
+        $this->queryParameters['SecurityEnhancementStrategy'] = $securityEnhancementStrategy;
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+        return $this;
+    }
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    /**
+     * @param string $keyPairName
+     *
+     * @return $this
+     */
+    public function setKeyPairName($keyPairName)
+    {
+        $this->requestParameters['KeyPairName'] = $keyPairName;
+        $this->queryParameters['KeyPairName'] = $keyPairName;
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+        return $this;
+    }
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+        return $this;
+    }
 
-	public function getImageId() {
-		return $this->imageId;
-	}
+    /**
+     * @param string $platform
+     *
+     * @return $this
+     */
+    public function setPlatform($platform)
+    {
+        $this->requestParameters['Platform'] = $platform;
+        $this->queryParameters['Platform'] = $platform;
 
-	public function setImageId($imageId) {
-		$this->imageId = $imageId;
-		$this->queryParameters["ImageId"]=$imageId;
-	}
+        return $this;
+    }
 
-	public function getSystemDiskSize() {
-		return $this->systemDiskSize;
-	}
+    /**
+     * @param string $password
+     *
+     * @return $this
+     */
+    public function setPassword($password)
+    {
+        $this->requestParameters['Password'] = $password;
+        $this->queryParameters['Password'] = $password;
 
-	public function setSystemDiskSize($systemDiskSize) {
-		$this->systemDiskSize = $systemDiskSize;
-		$this->queryParameters["SystemDisk.Size"]=$systemDiskSize;
-	}
+        return $this;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    /**
+     * @param string $instanceId
+     *
+     * @return $this
+     */
+    public function setInstanceId($instanceId)
+    {
+        $this->requestParameters['InstanceId'] = $instanceId;
+        $this->queryParameters['InstanceId'] = $instanceId;
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+        return $this;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    /**
+     * @param string $passwordInherit
+     *
+     * @return $this
+     */
+    public function setPasswordInherit($passwordInherit)
+    {
+        $this->requestParameters['PasswordInherit'] = $passwordInherit;
+        $this->queryParameters['PasswordInherit'] = $passwordInherit;
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+        return $this;
+    }
 
-	public function getUseAdditionalService() {
-		return $this->useAdditionalService;
-	}
+    /**
+     * @param string $systemDiskSize
+     *
+     * @return $this
+     */
+    public function setSystemDiskSize($systemDiskSize)
+    {
+        $this->requestParameters['SystemDiskSize'] = $systemDiskSize;
+        $this->queryParameters['SystemDisk.Size'] = $systemDiskSize;
 
-	public function setUseAdditionalService($useAdditionalService) {
-		$this->useAdditionalService = $useAdditionalService;
-		$this->queryParameters["UseAdditionalService"]=$useAdditionalService;
-	}
+        return $this;
+    }
 
-	public function getPassword() {
-		return $this->password;
-	}
+    /**
+     * @param string $diskId
+     *
+     * @return $this
+     */
+    public function setDiskId($diskId)
+    {
+        $this->requestParameters['DiskId'] = $diskId;
+        $this->queryParameters['DiskId'] = $diskId;
 
-	public function setPassword($password) {
-		$this->password = $password;
-		$this->queryParameters["Password"]=$password;
-	}
-	
+        return $this;
+    }
+
+    /**
+     * @param string $useAdditionalService
+     *
+     * @return $this
+     */
+    public function setUseAdditionalService($useAdditionalService)
+    {
+        $this->requestParameters['UseAdditionalService'] = $useAdditionalService;
+        $this->queryParameters['UseAdditionalService'] = $useAdditionalService;
+
+        return $this;
+    }
+
+    /**
+     * @param string $architecture
+     *
+     * @return $this
+     */
+    public function setArchitecture($architecture)
+    {
+        $this->requestParameters['Architecture'] = $architecture;
+        $this->queryParameters['Architecture'] = $architecture;
+
+        return $this;
+    }
 }

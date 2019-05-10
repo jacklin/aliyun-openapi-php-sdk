@@ -1,95 +1,128 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Cdn\Request\V20141111;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of SetRefererConfig
+ *
+ * @method string getReferList()
+ * @method string getSecurityToken()
+ * @method string getDomainName()
+ * @method string getReferType()
+ * @method string getDisableAst()
+ * @method string getOwnerId()
+ * @method string getAllowEmpty()
+ */
 class SetRefererConfigRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Cdn", "2014-11-11", "SetRefererConfig");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $securityToken;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Cdn',
+            '2014-11-11',
+            'SetRefererConfig'
+        );
+    }
 
-	private  $domainName;
+    /**
+     * @param string $referList
+     *
+     * @return $this
+     */
+    public function setReferList($referList)
+    {
+        $this->requestParameters['ReferList'] = $referList;
+        $this->queryParameters['ReferList'] = $referList;
 
-	private  $referType;
+        return $this;
+    }
 
-	private  $referList;
+    /**
+     * @param string $securityToken
+     *
+     * @return $this
+     */
+    public function setSecurityToken($securityToken)
+    {
+        $this->requestParameters['SecurityToken'] = $securityToken;
+        $this->queryParameters['SecurityToken'] = $securityToken;
 
-	private  $allowEmpty;
+        return $this;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    /**
+     * @param string $domainName
+     *
+     * @return $this
+     */
+    public function setDomainName($domainName)
+    {
+        $this->requestParameters['DomainName'] = $domainName;
+        $this->queryParameters['DomainName'] = $domainName;
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+        return $this;
+    }
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+    /**
+     * @param string $referType
+     *
+     * @return $this
+     */
+    public function setReferType($referType)
+    {
+        $this->requestParameters['ReferType'] = $referType;
+        $this->queryParameters['ReferType'] = $referType;
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+        return $this;
+    }
 
-	public function getDomainName() {
-		return $this->domainName;
-	}
+    /**
+     * @param string $disableAst
+     *
+     * @return $this
+     */
+    public function setDisableAst($disableAst)
+    {
+        $this->requestParameters['DisableAst'] = $disableAst;
+        $this->queryParameters['DisableAst'] = $disableAst;
 
-	public function setDomainName($domainName) {
-		$this->domainName = $domainName;
-		$this->queryParameters["DomainName"]=$domainName;
-	}
+        return $this;
+    }
 
-	public function getReferType() {
-		return $this->referType;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function setReferType($referType) {
-		$this->referType = $referType;
-		$this->queryParameters["ReferType"]=$referType;
-	}
+        return $this;
+    }
 
-	public function getReferList() {
-		return $this->referList;
-	}
+    /**
+     * @param string $allowEmpty
+     *
+     * @return $this
+     */
+    public function setAllowEmpty($allowEmpty)
+    {
+        $this->requestParameters['AllowEmpty'] = $allowEmpty;
+        $this->queryParameters['AllowEmpty'] = $allowEmpty;
 
-	public function setReferList($referList) {
-		$this->referList = $referList;
-		$this->queryParameters["ReferList"]=$referList;
-	}
-
-	public function getAllowEmpty() {
-		return $this->allowEmpty;
-	}
-
-	public function setAllowEmpty($allowEmpty) {
-		$this->allowEmpty = $allowEmpty;
-		$this->queryParameters["AllowEmpty"]=$allowEmpty;
-	}
-	
+        return $this;
+    }
 }

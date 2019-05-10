@@ -1,106 +1,127 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Mts\Request\V20140618;
 
+/**
+ * Request of UpdateWaterMarkTemplate
+ *
+ * @method string getResourceOwnerId()
+ * @method string getResourceOwnerAccount()
+ * @method string getOwnerAccount()
+ * @method string getName()
+ * @method string getOwnerId()
+ * @method string getWaterMarkTemplateId()
+ * @method string getConfig()
+ */
 class UpdateWaterMarkTemplateRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Mts", "2014-06-18", "UpdateWaterMarkTemplate");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $resourceOwnerAccount;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Mts',
+            '2014-06-18',
+            'UpdateWaterMarkTemplate',
+            'mts'
+        );
+    }
 
-	private  $resourceOwnerId;
+    /**
+     * @param string $resourceOwnerId
+     *
+     * @return $this
+     */
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->requestParameters['ResourceOwnerId'] = $resourceOwnerId;
+        $this->queryParameters['ResourceOwnerId'] = $resourceOwnerId;
 
-	private  $waterMarkTemplateId;
+        return $this;
+    }
 
-	private  $name;
+    /**
+     * @param string $resourceOwnerAccount
+     *
+     * @return $this
+     */
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->requestParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->queryParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
-	private  $config;
+        return $this;
+    }
 
-	private  $ownerAccount;
+    /**
+     * @param string $ownerAccount
+     *
+     * @return $this
+     */
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->requestParameters['OwnerAccount'] = $ownerAccount;
+        $this->queryParameters['OwnerAccount'] = $ownerAccount;
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+        return $this;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    /**
+     * @param string $name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->requestParameters['Name'] = $name;
+        $this->queryParameters['Name'] = $name;
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+        return $this;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+        return $this;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    /**
+     * @param string $waterMarkTemplateId
+     *
+     * @return $this
+     */
+    public function setWaterMarkTemplateId($waterMarkTemplateId)
+    {
+        $this->requestParameters['WaterMarkTemplateId'] = $waterMarkTemplateId;
+        $this->queryParameters['WaterMarkTemplateId'] = $waterMarkTemplateId;
 
-	public function getWaterMarkTemplateId() {
-		return $this->waterMarkTemplateId;
-	}
+        return $this;
+    }
 
-	public function setWaterMarkTemplateId($waterMarkTemplateId) {
-		$this->waterMarkTemplateId = $waterMarkTemplateId;
-		$this->queryParameters["WaterMarkTemplateId"]=$waterMarkTemplateId;
-	}
+    /**
+     * @param string $config
+     *
+     * @return $this
+     */
+    public function setConfig($config)
+    {
+        $this->requestParameters['Config'] = $config;
+        $this->queryParameters['Config'] = $config;
 
-	public function getName() {
-		return $this->name;
-	}
-
-	public function setName($name) {
-		$this->name = $name;
-		$this->queryParameters["Name"]=$name;
-	}
-
-	public function getConfig() {
-		return $this->config;
-	}
-
-	public function setConfig($config) {
-		$this->config = $config;
-		$this->queryParameters["Config"]=$config;
-	}
-
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
-
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
-	
+        return $this;
+    }
 }

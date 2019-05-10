@@ -1,84 +1,143 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Ecs\Request\V20140526;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of StartInstance
+ *
+ * @method string getSourceRegionId()
+ * @method string getInitLocalDisk()
+ * @method string getResourceOwnerId()
+ * @method string getInstanceId()
+ * @method string getDryRun()
+ * @method string getResourceOwnerAccount()
+ * @method string getOwnerAccount()
+ * @method string getOwnerId()
+ */
 class StartInstanceRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "StartInstance");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $resourceOwnerAccount;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Ecs',
+            '2014-05-26',
+            'StartInstance',
+            'ecs'
+        );
+    }
 
-	private  $resourceOwnerId;
+    /**
+     * @param string $sourceRegionId
+     *
+     * @return $this
+     */
+    public function setSourceRegionId($sourceRegionId)
+    {
+        $this->requestParameters['SourceRegionId'] = $sourceRegionId;
+        $this->queryParameters['SourceRegionId'] = $sourceRegionId;
 
-	private  $instanceId;
+        return $this;
+    }
 
-	private  $ownerAccount;
+    /**
+     * @param string $initLocalDisk
+     *
+     * @return $this
+     */
+    public function setInitLocalDisk($initLocalDisk)
+    {
+        $this->requestParameters['InitLocalDisk'] = $initLocalDisk;
+        $this->queryParameters['InitLocalDisk'] = $initLocalDisk;
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+        return $this;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    /**
+     * @param string $resourceOwnerId
+     *
+     * @return $this
+     */
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->requestParameters['ResourceOwnerId'] = $resourceOwnerId;
+        $this->queryParameters['ResourceOwnerId'] = $resourceOwnerId;
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+        return $this;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    /**
+     * @param string $instanceId
+     *
+     * @return $this
+     */
+    public function setInstanceId($instanceId)
+    {
+        $this->requestParameters['InstanceId'] = $instanceId;
+        $this->queryParameters['InstanceId'] = $instanceId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+        return $this;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    /**
+     * @param string $dryRun
+     *
+     * @return $this
+     */
+    public function setDryRun($dryRun)
+    {
+        $this->requestParameters['DryRun'] = $dryRun;
+        $this->queryParameters['DryRun'] = $dryRun;
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+        return $this;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    /**
+     * @param string $resourceOwnerAccount
+     *
+     * @return $this
+     */
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->requestParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
+        $this->queryParameters['ResourceOwnerAccount'] = $resourceOwnerAccount;
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+        return $this;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
-	
+    /**
+     * @param string $ownerAccount
+     *
+     * @return $this
+     */
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->requestParameters['OwnerAccount'] = $ownerAccount;
+        $this->queryParameters['OwnerAccount'] = $ownerAccount;
+
+        return $this;
+    }
+
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
+
+        return $this;
+    }
 }

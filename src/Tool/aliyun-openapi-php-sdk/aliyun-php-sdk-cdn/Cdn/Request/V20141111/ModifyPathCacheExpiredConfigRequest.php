@@ -1,106 +1,128 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Cdn\Request\V20141111;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of ModifyPathCacheExpiredConfig
+ *
+ * @method string getSecurityToken()
+ * @method string getConfigID()
+ * @method string getDomainName()
+ * @method string getWeight()
+ * @method string getCacheContent()
+ * @method string getOwnerId()
+ * @method string getTTL()
+ */
 class ModifyPathCacheExpiredConfigRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Cdn", "2014-11-11", "ModifyPathCacheExpiredConfig");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $securityToken;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Cdn',
+            '2014-11-11',
+            'ModifyPathCacheExpiredConfig'
+        );
+    }
 
-	private  $domainName;
+    /**
+     * @param string $securityToken
+     *
+     * @return $this
+     */
+    public function setSecurityToken($securityToken)
+    {
+        $this->requestParameters['SecurityToken'] = $securityToken;
+        $this->queryParameters['SecurityToken'] = $securityToken;
 
-	private  $configID;
+        return $this;
+    }
 
-	private  $cacheContent;
+    /**
+     * @param string $configID
+     *
+     * @return $this
+     */
+    public function setConfigID($configID)
+    {
+        $this->requestParameters['ConfigID'] = $configID;
+        $this->queryParameters['ConfigID'] = $configID;
 
-	private  $tTL;
+        return $this;
+    }
 
-	private  $weight;
+    /**
+     * @param string $domainName
+     *
+     * @return $this
+     */
+    public function setDomainName($domainName)
+    {
+        $this->requestParameters['DomainName'] = $domainName;
+        $this->queryParameters['DomainName'] = $domainName;
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+        return $this;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    /**
+     * @param string $weight
+     *
+     * @return $this
+     */
+    public function setWeight($weight)
+    {
+        $this->requestParameters['Weight'] = $weight;
+        $this->queryParameters['Weight'] = $weight;
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+        return $this;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    /**
+     * @param string $cacheContent
+     *
+     * @return $this
+     */
+    public function setCacheContent($cacheContent)
+    {
+        $this->requestParameters['CacheContent'] = $cacheContent;
+        $this->queryParameters['CacheContent'] = $cacheContent;
 
-	public function getDomainName() {
-		return $this->domainName;
-	}
+        return $this;
+    }
 
-	public function setDomainName($domainName) {
-		$this->domainName = $domainName;
-		$this->queryParameters["DomainName"]=$domainName;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function getConfigID() {
-		return $this->configID;
-	}
+        return $this;
+    }
 
-	public function setConfigID($configID) {
-		$this->configID = $configID;
-		$this->queryParameters["ConfigID"]=$configID;
-	}
+    /**
+     * @param string $tTL
+     *
+     * @return $this
+     */
+    public function setTTL($tTL)
+    {
+        $this->requestParameters['TTL'] = $tTL;
+        $this->queryParameters['TTL'] = $tTL;
 
-	public function getCacheContent() {
-		return $this->cacheContent;
-	}
-
-	public function setCacheContent($cacheContent) {
-		$this->cacheContent = $cacheContent;
-		$this->queryParameters["CacheContent"]=$cacheContent;
-	}
-
-	public function getTTL() {
-		return $this->tTL;
-	}
-
-	public function setTTL($tTL) {
-		$this->tTL = $tTL;
-		$this->queryParameters["TTL"]=$tTL;
-	}
-
-	public function getWeight() {
-		return $this->weight;
-	}
-
-	public function setWeight($weight) {
-		$this->weight = $weight;
-		$this->queryParameters["Weight"]=$weight;
-	}
-	
+        return $this;
+    }
 }

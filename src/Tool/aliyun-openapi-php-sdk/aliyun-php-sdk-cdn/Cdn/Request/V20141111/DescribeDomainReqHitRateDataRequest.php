@@ -1,84 +1,100 @@
 <?php
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 namespace Cdn\Request\V20141111;
 
+/**
+ * @deprecated Please use https://github.com/aliyun/openapi-sdk-php
+ *
+ * Request of DescribeDomainReqHitRateData
+ *
+ * @method string getStartTime()
+ * @method string getDomainName()
+ * @method string getEndTime()
+ * @method string getOwnerId()
+ * @method string getInterval()
+ */
 class DescribeDomainReqHitRateDataRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Cdn", "2014-11-11", "DescribeDomainReqHitRateData");
-	}
 
-	private  $ownerId;
+    /**
+     * @var string
+     */
+    protected $method = 'POST';
 
-	private  $securityToken;
+    /**
+     * Class constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(
+            'Cdn',
+            '2014-11-11',
+            'DescribeDomainReqHitRateData'
+        );
+    }
 
-	private  $domainName;
+    /**
+     * @param string $startTime
+     *
+     * @return $this
+     */
+    public function setStartTime($startTime)
+    {
+        $this->requestParameters['StartTime'] = $startTime;
+        $this->queryParameters['StartTime'] = $startTime;
 
-	private  $startTime;
+        return $this;
+    }
 
-	private  $endTime;
+    /**
+     * @param string $domainName
+     *
+     * @return $this
+     */
+    public function setDomainName($domainName)
+    {
+        $this->requestParameters['DomainName'] = $domainName;
+        $this->queryParameters['DomainName'] = $domainName;
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+        return $this;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    /**
+     * @param string $endTime
+     *
+     * @return $this
+     */
+    public function setEndTime($endTime)
+    {
+        $this->requestParameters['EndTime'] = $endTime;
+        $this->queryParameters['EndTime'] = $endTime;
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+        return $this;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    /**
+     * @param string $ownerId
+     *
+     * @return $this
+     */
+    public function setOwnerId($ownerId)
+    {
+        $this->requestParameters['OwnerId'] = $ownerId;
+        $this->queryParameters['OwnerId'] = $ownerId;
 
-	public function getDomainName() {
-		return $this->domainName;
-	}
+        return $this;
+    }
 
-	public function setDomainName($domainName) {
-		$this->domainName = $domainName;
-		$this->queryParameters["DomainName"]=$domainName;
-	}
+    /**
+     * @param string $interval
+     *
+     * @return $this
+     */
+    public function setInterval($interval)
+    {
+        $this->requestParameters['Interval'] = $interval;
+        $this->queryParameters['Interval'] = $interval;
 
-	public function getStartTime() {
-		return $this->startTime;
-	}
-
-	public function setStartTime($startTime) {
-		$this->startTime = $startTime;
-		$this->queryParameters["StartTime"]=$startTime;
-	}
-
-	public function getEndTime() {
-		return $this->endTime;
-	}
-
-	public function setEndTime($endTime) {
-		$this->endTime = $endTime;
-		$this->queryParameters["EndTime"]=$endTime;
-	}
-	
+        return $this;
+    }
 }
