@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f97d215148170f2dc8366582e1f65bc6",
+    "content-hash": "44f45b6aceb5edf94b376d104b6c6209",
     "packages": [
         {
             "name": "adbario/php-dot-notation",
@@ -18,7 +18,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/adbario/php-dot-notation/zipball/eee4fc81296531e6aafba4c2bbccfc5adab1676e",
                 "reference": "eee4fc81296531e6aafba4c2bbccfc5adab1676e",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "ext-json": "*",
@@ -67,7 +73,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/aliyun/openapi-sdk-php-client/zipball/5347dc0b204995bc51d0bdd6054a2ae9eb32f0cd",
                 "reference": "5347dc0b204995bc51d0bdd6054a2ae9eb32f0cd",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "adbario/php-dot-notation": "^2.2",
@@ -140,17 +152,23 @@
         },
         {
             "name": "alibabacloud/sdk",
-            "version": "1.6.1",
+            "version": "1.8.68",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aliyun/openapi-sdk-php.git",
-                "reference": "bd641facea1433fafc770ae04b056ce123d3d5e0"
+                "reference": "426c11462a304d91d43bb5b7800d3cfcd8b5a6bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aliyun/openapi-sdk-php/zipball/bd641facea1433fafc770ae04b056ce123d3d5e0",
-                "reference": "bd641facea1433fafc770ae04b056ce123d3d5e0",
-                "shasum": ""
+                "url": "https://api.github.com/repos/aliyun/openapi-sdk-php/zipball/426c11462a304d91d43bb5b7800d3cfcd8b5a6bb",
+                "reference": "426c11462a304d91d43bb5b7800d3cfcd8b5a6bb",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "alibabacloud/client": "^1.5",
@@ -166,6 +184,7 @@
             "replace": {
                 "alibabacloud/aas": "self.version",
                 "alibabacloud/actiontrail": "self.version",
+                "alibabacloud/adb": "self.version",
                 "alibabacloud/aegis": "self.version",
                 "alibabacloud/afs": "self.version",
                 "alibabacloud/airec": "self.version",
@@ -173,6 +192,8 @@
                 "alibabacloud/alikafka": "self.version",
                 "alibabacloud/alimt": "self.version",
                 "alibabacloud/aliprobe": "self.version",
+                "alibabacloud/aliyuncvc": "self.version",
+                "alibabacloud/appmallsservice": "self.version",
                 "alibabacloud/arms": "self.version",
                 "alibabacloud/arms4finance": "self.version",
                 "alibabacloud/baas": "self.version",
@@ -195,10 +216,12 @@
                 "alibabacloud/cloudwf": "self.version",
                 "alibabacloud/cms": "self.version",
                 "alibabacloud/commondriver": "self.version",
+                "alibabacloud/companyreg": "self.version",
                 "alibabacloud/cr": "self.version",
                 "alibabacloud/crm": "self.version",
                 "alibabacloud/cs": "self.version",
                 "alibabacloud/csb": "self.version",
+                "alibabacloud/cusanalyticsconline": "self.version",
                 "alibabacloud/dataworkspublic": "self.version",
                 "alibabacloud/dbs": "self.version",
                 "alibabacloud/dcdn": "self.version",
@@ -211,6 +234,7 @@
                 "alibabacloud/drds": "self.version",
                 "alibabacloud/dts": "self.version",
                 "alibabacloud/dybaseapi": "self.version",
+                "alibabacloud/dyplsapi": "self.version",
                 "alibabacloud/dypnsapi": "self.version",
                 "alibabacloud/dysmsapi": "self.version",
                 "alibabacloud/dyvmsapi": "self.version",
@@ -219,22 +243,33 @@
                 "alibabacloud/ecsinc": "self.version",
                 "alibabacloud/edas": "self.version",
                 "alibabacloud/ehpc": "self.version",
+                "alibabacloud/elasticsearch": "self.version",
                 "alibabacloud/emr": "self.version",
                 "alibabacloud/ess": "self.version",
+                "alibabacloud/facebody": "self.version",
+                "alibabacloud/fnf": "self.version",
                 "alibabacloud/foas": "self.version",
                 "alibabacloud/ft": "self.version",
+                "alibabacloud/goodstech": "self.version",
                 "alibabacloud/gpdb": "self.version",
                 "alibabacloud/green": "self.version",
+                "alibabacloud/hbase": "self.version",
                 "alibabacloud/hpc": "self.version",
                 "alibabacloud/hsm": "self.version",
                 "alibabacloud/httpdns": "self.version",
                 "alibabacloud/idst": "self.version",
+                "alibabacloud/imageaudit": "self.version",
+                "alibabacloud/imageenhan": "self.version",
+                "alibabacloud/imagerecog": "self.version",
                 "alibabacloud/imagesearch": "self.version",
+                "alibabacloud/imageseg": "self.version",
                 "alibabacloud/imm": "self.version",
                 "alibabacloud/industrybrain": "self.version",
                 "alibabacloud/iot": "self.version",
+                "alibabacloud/iqa": "self.version",
                 "alibabacloud/itaas": "self.version",
                 "alibabacloud/ivision": "self.version",
+                "alibabacloud/ivpd": "self.version",
                 "alibabacloud/jaq": "self.version",
                 "alibabacloud/jarvis": "self.version",
                 "alibabacloud/jarvispublic": "self.version",
@@ -247,11 +282,17 @@
                 "alibabacloud/lubanruler": "self.version",
                 "alibabacloud/market": "self.version",
                 "alibabacloud/mopen": "self.version",
+                "alibabacloud/mpserverless": "self.version",
                 "alibabacloud/mts": "self.version",
+                "alibabacloud/multimediaai": "self.version",
                 "alibabacloud/nas": "self.version",
+                "alibabacloud/netana": "self.version",
                 "alibabacloud/nlp": "self.version",
+                "alibabacloud/nlpautoml": "self.version",
                 "alibabacloud/nlscloudmeta": "self.version",
                 "alibabacloud/nlsfiletrans": "self.version",
+                "alibabacloud/objectdet": "self.version",
+                "alibabacloud/ocr": "self.version",
                 "alibabacloud/ocs": "self.version",
                 "alibabacloud/oms": "self.version",
                 "alibabacloud/ons": "self.version",
@@ -267,6 +308,8 @@
                 "alibabacloud/qualitycheck": "self.version",
                 "alibabacloud/ram": "self.version",
                 "alibabacloud/rds": "self.version",
+                "alibabacloud/reid": "self.version",
+                "alibabacloud/retailcloud": "self.version",
                 "alibabacloud/rkvstore": "self.version",
                 "alibabacloud/ros": "self.version",
                 "alibabacloud/rtc": "self.version",
@@ -274,9 +317,11 @@
                 "alibabacloud/sas": "self.version",
                 "alibabacloud/sasapi": "self.version",
                 "alibabacloud/scdn": "self.version",
+                "alibabacloud/schedulerx2": "self.version",
                 "alibabacloud/skyeye": "self.version",
                 "alibabacloud/slb": "self.version",
                 "alibabacloud/smartag": "self.version",
+                "alibabacloud/smc": "self.version",
                 "alibabacloud/sms": "self.version",
                 "alibabacloud/smsintl": "self.version",
                 "alibabacloud/snsuapi": "self.version",
@@ -288,11 +333,15 @@
                 "alibabacloud/ubsms": "self.version",
                 "alibabacloud/ubsmsinner": "self.version",
                 "alibabacloud/uis": "self.version",
+                "alibabacloud/unimkt": "self.version",
+                "alibabacloud/visionai": "self.version",
                 "alibabacloud/vod": "self.version",
                 "alibabacloud/vpc": "self.version",
+                "alibabacloud/vs": "self.version",
                 "alibabacloud/wafopenapi": "self.version",
                 "alibabacloud/welfareinner": "self.version",
                 "alibabacloud/xspace": "self.version",
+                "alibabacloud/xtrace": "self.version",
                 "alibabacloud/yqbridge": "self.version",
                 "alibabacloud/yundun": "self.version"
             },
@@ -333,7 +382,7 @@
                 "library",
                 "sdk"
             ],
-            "time": "2019-05-09T09:25:38+00:00"
+            "time": "2020-01-17T07:29:33+00:00"
         },
         {
             "name": "clagiordano/weblibs-configmanager",
@@ -347,7 +396,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/clagiordano/weblibs-configmanager/zipball/d1869310b9f57812581ff56cf4b456cbcc0d0516",
                 "reference": "d1869310b9f57812581ff56cf4b456cbcc0d0516",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": ">=5.4"
@@ -394,7 +449,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/danielstjules/Stringy/zipball/df24ab62d2d8213bbbe88cc36fc35a4503b4bd7e",
                 "reference": "df24ab62d2d8213bbbe88cc36fc35a4503b4bd7e",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": ">=5.4.0",
@@ -450,7 +511,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
                 "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "guzzlehttp/promises": "^1.0",
@@ -515,7 +582,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
                 "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": ">=5.5.0"
@@ -566,7 +639,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/psr7/zipball/9f83dded91781a01c63574e387eaa769be769115",
                 "reference": "9f83dded91781a01c63574e387eaa769be769115",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": ">=5.4.0",
@@ -633,7 +712,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/ramsey/moontoast-math/zipball/c2792a25df5cad4ff3d760dd37078fc5b6fccc79",
                 "reference": "c2792a25df5cad4ff3d760dd37078fc5b6fccc79",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "ext-bcmath": "*",
@@ -668,6 +753,7 @@
                 "bcmath",
                 "math"
             ],
+            "abandoned": "brick/math",
             "time": "2017-02-16T16:54:46+00:00"
         },
         {
@@ -682,7 +768,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/jmespath/jmespath.php/zipball/adcc9531682cf87dfda21e1fd5d0e7a41d292fac",
                 "reference": "adcc9531682cf87dfda21e1fd5d0e7a41d292fac",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": ">=5.4.0"
@@ -737,7 +829,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/paragonie/random_compat/zipball/84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
                 "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": "^7"
@@ -782,7 +880,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
                 "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": ">=5.3.0"
@@ -832,7 +936,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
                 "reference": "5601c8a83fbba7ef674a7369456d12f1e0d0eafa",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": ">=5.3"
@@ -872,7 +982,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/ramsey/uuid/zipball/d09ea80159c1929d75b3f9c60504d613aeb4a1e3",
                 "reference": "d09ea80159c1929d75b3f9c60504d613aeb4a1e3",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "paragonie/random_compat": "^1.0|^2.0|9.99.99",
@@ -954,7 +1070,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
                 "reference": "82ebae02209c21113908c229e9883c419720738a",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": ">=5.3.3"
@@ -1012,7 +1134,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
                 "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
-                "shasum": ""
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": ">=5.3.3"
